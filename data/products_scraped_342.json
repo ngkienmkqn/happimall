@@ -1,0 +1,13 @@
+{
+    "products": [
+        {
+            "id": "temp",
+            "name": "Placeholder",
+            "price": "$0",
+            "imageUrl": "http://example.com/image.jpg",
+            "sourceUrl": "http://example.com",
+            "category": "GiftShop"
+        }
+    ],
+    "total": 1
+}

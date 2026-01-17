@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get started with Happi Mall - Create your free account and start dropshipping custom products today. No upfront costs, no minimums.">
+    <meta name="keywords" content="start dropshipping, happi mall signup, free account, get started">
+    <meta name="author" content="Articulat Private Limited">
+
+    <title>Get Started - Happi Mall</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="how-it-works.html" class="nav-link">How it Works</a></li>
+                <li class="nav-item"><a href="integrations.html" class="nav-link">Integrations</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#signup" class="btn btn-primary">Sign Up Free</a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section-hero" style="padding: 6rem 0 4rem;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-size: 3rem;">Start Selling Today</h1>
+                <p class="hero-subtitle">
+                    <strong style="color: var(--color-primary);">100% Free to Start</strong> •
+                    <strong style="color: var(--color-primary);">No Credit Card Required</strong> •
+                    <strong style="color: var(--color-primary);">Set Up in Minutes</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Steps -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Quick Start Guide</h2>
+                <p>Follow these simple steps to launch your dropshipping business</p>
+            </div>
+
+            <div class="grid grid-4">
+                <div class="card text-center">
+                    <div
+                        style="width: 80px; height: 80px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; margin: 0 auto 1.5rem;">
+                        1
+                    </div>
+                    <h3>Create Account</h3>
+                    <p style="margin-top: 0.75rem;">Sign up with your email - completely free, no credit card needed</p>
+                </div>
+
+                <div class="card text-center">
+                    <div
+                        style="width: 80px; height: 80px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; margin: 0 auto 1.5rem;">
+                        2
+                    </div>
+                    <h3>Connect Store</h3>
+                    <p style="margin-top: 0.75rem;">Link your Shopify, Etsy, or other ecommerce platform in one click
+                    </p>
+                </div>
+
+                <div class="card text-center">
+                    <div
+                        style="width: 80px; height: 80px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; margin: 0 auto 1.5rem;">
+                        3
+                    </div>
+                    <h3>Import Products</h3>
+                    <p style="margin-top: 0.75rem;">Browse 1000+ products and add them to your store instantly</p>
+                </div>
+
+                <div class="card text-center">
+                    <div
+                        style="width: 80px; height: 80px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; margin: 0 auto 1.5rem;">
+                        4
+                    </div>
+                    <h3>Start Selling</h3>
+                    <p style="margin-top: 0.75rem;">Orders automatically fulfill - we handle production and shipping</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Form -->
+    <section id="signup" class="section" style="background: var(--color-bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Create Your Free Account</h2>
+                <p>Join thousands of successful entrepreneurs using Happi Mall</p>
+            </div>
+
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="card">
+                    <form id="signupForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div>
+                            <label for="fullname" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Full
+                                Name *</label>
+                            <input type="text" id="fullname" name="fullname" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        </div>
+
+                        <div>
+                            <label for="signup-email"
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address *</label>
+                            <input type="email" id="signup-email" name="email" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        </div>
+
+                        <div>
+                            <label for="password"
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Password *</label>
+                            <input type="password" id="password" name="password" required minlength="8"
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                            <p style="font-size: 0.875rem; color: var(--color-text-light); margin-top: 0.25rem;">Minimum
+                                8 characters</p>
+                        </div>
+
+                        <div>
+                            <label for="store-url"
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Store URL
+                                (Optional)</label>
+                            <input type="url" id="store-url" name="store_url" placeholder="https://yourstore.com"
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        </div>
+
+                        <div>
+                            <label for="platform" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Your
+                                Platform</label>
+                            <select id="platform" name="platform"
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                                <option value="">Select your platform...</option>
+                                <option value="shopify">Shopify</option>
+                                <option value="etsy">Etsy</option>
+                                <option value="woocommerce">WooCommerce</option>
+                                <option value="shopline">SHOPLINE</option>
+                                <option value="other">Other</option>
+                                <option value="no-store">I don't have a store yet</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; align-items: start; gap: 0.75rem;">
+                            <input type="checkbox" id="terms" name="terms" required
+                                style="margin-top: 0.25rem; width: 18px; height: 18px;">
+                            <label for="terms" style="font-size: 0.875rem; line-height: 1.5;">
+                                I agree to the <a href="policies.html" style="color: var(--color-primary);">Terms of
+                                    Service</a> and
+                                <a href="policies.html" style="color: var(--color-primary);">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Create Free Account</button>
+
+                        <p style="text-align: center; font-size: 0.875rem; color: var(--color-text-light);">
+                            Already have an account? <a href="#"
+                                style="color: var(--color-primary); font-weight: 600;">Log in</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What You Get with Happi Mall</h2>
+                <p>Everything you need to succeed in dropshipping</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <h4>✅ 1000+ Premium Products</h4>
+                    <p style="margin-top: 0.75rem;">Access our entire catalog of high-quality dropshipping and POD
+                        products</p>
+                </div>
+
+                <div class="card">
+                    <h4>✅ Zero Upfront Costs</h4>
+                    <p style="margin-top: 0.75rem;">No monthly fees, no setup costs - only pay for products when your
+                        customers order</p>
+                </div>
+
+                <div class="card">
+                    <h4>✅ Fast 72-Hour Production</h4>
+                    <p style="margin-top: 0.75rem;">Most orders produced and shipped within 3 days for quick customer
+                        delivery</p>
+                </div>
+
+                <div class="card">
+                    <h4>✅ Global Warehouses</h4>
+                    <p style="margin-top: 0.75rem;">Fulfill from USA, Europe, Australia, and Asia for faster
+                        international shipping</p>
+                </div>
+
+                <div class="card">
+                    <h4>✅ Automatic Fulfillment</h4>
+                    <p style="margin-top: 0.75rem;">Orders sync automatically - we handle production, packing, and
+                        shipping</p>
+                </div>
+
+                <div class="card">
+                    <h4>✅ Your Branding</h4>
+                    <p style="margin-top: 0.75rem;">Products ship with your brand - no Happi Mall branding on packaging
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>✅ 24/7 Support</h4>
+                    <p style="margin-top: 0.75rem;">Get help whenever you need it from our dedicated support team</p>
+                </div>
+
+                <div class="card">
+                    <h4>✅ No Minimums</h4>
+                    <p style="margin-top: 0.75rem;">Sell one item or thousands - we scale with your business</p>
+                </div>
+
+                <div class="card">
+                    <h4>✅ Easy Integration</h4>
+                    <p style="margin-top: 0.75rem;">Connect to Shopify, Etsy, WooCommerce, and more in just a few clicks
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" style="background: var(--color-bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>Hear from entrepreneurs who are thriving with Happi Mall</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <p style="font-style: italic; margin-bottom: 1rem;">
+                        "Happi Mall made it so easy to start my dropshipping business. I was selling within an hour of
+                        signing up!"
+                    </p>
+                    <p style="font-weight: 600;">Sarah M.</p>
+                    <p style="font-size: 0.875rem; color: var(--color-text-light);">Shopify Store Owner</p>
+                </div>
+
+                <div class="card">
+                    <p style="font-style: italic; margin-bottom: 1rem;">
+                        "The product quality is amazing and my customers love the fast shipping. Highly recommended!"
+                    </p>
+                    <p style="font-weight: 600;">David L.</p>
+                    <p style="font-size: 0.875rem; color: var(--color-text-light);">Etsy Seller</p>
+                </div>
+
+                <div class="card">
+                    <p style="font-style: italic; margin-bottom: 1rem;">
+                        "Best dropshipping partner I've worked with. Great products, fair prices, and excellent
+                        support."
+                    </p>
+                    <p style="font-weight: 600;">Jessica T.</p>
+                    <p style="font-size: 0.875rem; color: var(--color-text-light);">WooCommerce Entrepreneur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Common Questions</h2>
+                <p>Everything you need to know before getting started</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h4>Do I need a credit card to sign up?</h4>
+                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
+                        No! You can create a free account without providing any payment information. You only pay when
+                        your customers place orders.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h4>Can I start without an existing store?</h4>
+                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
+                        Yes! You can sign up first and set up your store later. We'll guide you through the process of
+                        creating a store on your chosen platform.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h4>How long does setup take?</h4>
+                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
+                        Most users complete setup in under 15 minutes. Creating your account takes 2 minutes, connecting
+                        your store takes 5 minutes, and importing your first products takes just a few clicks.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>Is there a contract or minimum commitment?</h4>
+                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
+                        No contract, no commitment. You can use Happi Mall for as long as you like and cancel anytime.
+                        There are also no minimum order requirements.
+                    </p>
+                </div>
+
+                <a href="help-center.html#faq" class="btn btn-outline"
+                    style="margin-top: 2rem; display: inline-block;">View All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
+        <div class="container">
+            <div style="text-align: center; color: white;">
+                <h2 style="color: white; font-size: 2.5rem;">Ready to Start Your Journey?</h2>
+                <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.25rem; margin: 1.5rem 0;">
+                    Join Happi Mall today and start building your dropshipping empire
+                </p>
+                <a href="#signup" class="btn btn-large" style="background: white; color: var(--color-primary);">Create
+                    Free Account</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
+                        Your trusted partner for custom dropshipping and print-on-demand solutions.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About & Contact</a></li>
+                        <li><a href="policies.html">Terms of Service</a></li>
+                        <li><a href="policies.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Integrations</h4>
+                    <ul>
+                        <li><a href="integrations.html">Sell on Shopify</a></li>
+                        <li><a href="integrations.html">Sell on Etsy</a></li>
+                        <li><a href="integrations.html">Sell on WooCommerce</a></li>
+                        <li><a href="integrations.html">Developer API</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="help-center.html#faq">FAQ</a></li>
+                        <li><a href="support.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    8 BURN ROAD, #04-04, TRIVEX, Singapore 369977 |
+                    <a href="mailto:info@happimall.com" style="color: var(--color-primary);">info@happimall.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+    <script>
+        // Simple form handling
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Welcome to Happi Mall! Check your email for next steps.');
+            // In production, this would submit to your backend
+        });
+    </script>
+</body>
+
+</html>

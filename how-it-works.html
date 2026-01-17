@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Happi Mall - Learn how drop shipping works. Simple methods for Rookie, Standard, and Professional sellers.">
+    <meta name="author" content="Articulat Private Limited">
+
+    <title>How it Works - Happi Mall</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+
+    <style>
+        .method-card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--color-border);
+            transition: var(--transition-default);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .method-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+        }
+
+        .method-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--color-primary);
+        }
+
+        .method-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .method-title {
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .method-steps {
+            margin-top: 2rem;
+        }
+
+        .method-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .method-step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .step-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--color-bg-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .step-content h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="index.html#products" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="index.html#hot-lists" class="nav-link">Hot Lists</a></li>
+                <li class="nav-item"><a href="index.html#warehouse" class="nav-link">Global Warehouse</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="index.html#support" class="nav-link">Support</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="index.html#start" class="btn btn-primary">Start Selling</a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section-hero" style="padding: 6rem 0 4rem;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-size: 3.5rem;">How It Works</h1>
+                <p class="hero-subtitle">
+                    Three simple methods to start selling with Happi Mall. Choose the approach that fits your business
+                    model.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methods Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Rookie Method -->
+            <div class="method-card fade-in-up" style="margin-bottom: 3rem;">
+                <div class="method-number">1</div>
+                <h2 class="method-title">Rookie Method</h2>
+                <p style="font-size: 1.125rem; color: var(--color-text-light); margin-bottom: 2rem;">
+                    <strong>Find → Checkout</strong><br>
+                    Perfect for beginners or testing products. Simply browse, choose, and fulfill orders manually.
+                </p>
+
+                <div class="method-steps">
+                    <div class="method-step">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <h4>Find Products</h4>
+                            <p>Browse our catalog of 1000+ high-quality custom products. Filter by category, price, or
+                                production time.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            <h4>Receive Customer Orders</h4>
+                            <p>When a customer places an order on your store, collect their information and product
+                                details.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            <h4>Manual Checkout</h4>
+                            <p>Submit the order through Happi Mall with your customer's shipping address and
+                                customization details.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            <h4>We Handle Production & Shipping</h4>
+                            <p>We produce and ship directly to your customer. You keep the profit margin!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standard Method -->
+            <div class="method-card fade-in-up" style="margin-bottom: 3rem; animation-delay: 0.1s;">
+                <div class="method-number">2</div>
+                <h2 class="method-title">Standard Method</h2>
+                <p style="font-size: 1.125rem; color: var(--color-text-light); margin-bottom: 2rem;">
+                    <strong>Find → Sell → Dropship</strong><br>
+                    Automate your fulfillment. Connect your store and let orders sync automatically.
+                </p>
+
+                <div class="method-steps">
+                    <div class="method-step">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <h4>Integrate Your Shop</h4>
+                            <p>Connect your Shopify, Etsy, WooCommerce, or other ecommerce platform with Happi Mall.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            <h4>Add Products to Your Store</h4>
+                            <p>Import products from our catalog to your store. Customize descriptions and set your
+                                retail prices.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            <h4>Customer Orders Automatically</h4>
+                            <p>When customers order, the order automatically syncs to Happi Mall for fulfillment.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            <h4>Automated Production & Shipping</h4>
+                            <p>We handle everything automatically - production, quality control, packaging, and
+                                worldwide shipping.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Method -->
+            <div class="method-card fade-in-up" style="animation-delay: 0.2s;">
+                <div class="method-number">3</div>
+                <h2 class="method-title">Professional Method</h2>
+                <p style="font-size: 1.125rem; color: var(--color-text-light); margin-bottom: 2rem;">
+                    <strong>Design → Sell → Dropship</strong><br>
+                    Maximum customization. Upload your designs and create unique branded products.
+                </p>
+
+                <div class="method-steps">
+                    <div class="method-step">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <h4>Use Mockup Generator</h4>
+                            <p>Access our AI-powered design tools. Upload your artwork and apply it to any product in
+                                our catalog.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            <h4>Create Custom Products</h4>
+                            <p>Design unique products with your brand. Preview mockups in real-time before publishing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            <h4>Sync & Sell</h4>
+                            <p>Push your custom products directly to your connected stores. Set your pricing and start
+                                selling.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            <h4>Automated Fulfillment</h4>
+                            <p>Orders sync automatically. We print your designs on demand and ship to your customers
+                                worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: var(--color-bg-light);">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Ready to Get Started?</h2>
+                <p>
+                    Choose your method and start selling custom products today.
+                    100% free to use with no upfront costs or monthly fees.
+                </p>
+                <a href="index.html#start" class="btn btn-large">Start Your Free Account</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
+                        Your trusted partner for custom dropshipping and print-on-demand solutions.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About & Contact</a></li>
+                        <li><a href="policies.html">Terms of Service</a></li>
+                        <li><a href="policies.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Integrations</h4>
+                    <ul>
+                        <li><a href="#shopify">Sell on Shopify</a></li>
+                        <li><a href="#etsy">Sell on Etsy</a></li>
+                        <li><a href="#woocommerce">Sell on WooCommerce</a></li>
+                        <li><a href="#api">Developer API</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    8 BURN ROAD, #04-04, TRIVEX, Singapore 369977 |
+                    <a href="mailto:info@happimall.com" style="color: var(--color-primary);">info@happimall.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

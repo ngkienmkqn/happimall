@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Happi Mall Support - Get help with your dropshipping business. Contact our support team for technical assistance, product questions, and more.">
+    <meta name="keywords" content="happi mall support, dropshipping help, customer service, contact support">
+    <meta name="author" content="Articulat Private Limited">
+
+    <title>Support - Happi Mall</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="how-it-works.html" class="nav-link">How it Works</a></li>
+                <li class="nav-item"><a href="integrations.html" class="nav-link">Integrations</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="get-started.html" class="btn btn-primary">Start Selling</a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section-hero" style="padding: 6rem 0 4rem;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-size: 3rem;">We're Here to Help</h1>
+                <p class="hero-subtitle">
+                    Get fast, friendly support from our expert team
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Options -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-3">
+                <div class="card text-center">
+                    <h3>📧 Email Support</h3>
+                    <p style="margin: 1rem 0;">General inquiries and support</p>
+                    <a href="mailto:info@happimall.com"
+                        style="color: var(--color-primary); font-size: 1.25rem; font-weight: 600;">
+                        info@happimall.com
+                    </a>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);">
+                        Response time: Within 24 hours
+                    </p>
+                </div>
+
+                <div class="card text-center">
+                    <h3>💬 Live Chat</h3>
+                    <p style="margin: 1rem 0;">Instant support during business hours</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Start Chat</a>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);">
+                        Mon-Fri: 9 AM - 6 PM SGT
+                    </p>
+                </div>
+
+                <div class="card text-center">
+                    <h3>📚 Help Center</h3>
+                    <p style="margin: 1rem 0;">Browse our knowledge base</p>
+                    <a href="help-center.html" class="btn btn-outline" style="margin-top: 1rem;">Visit Help Center</a>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);">
+                        Find answers to common questions
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section" style="background: var(--color-bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you soon</p>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div class="card">
+                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div>
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Your Name
+                                *</label>
+                            <input type="text" id="name" name="name" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        </div>
+
+                        <div>
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email
+                                Address *</label>
+                            <input type="email" id="email" name="email" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        </div>
+
+                        <div>
+                            <label for="subject"
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Subject *</label>
+                            <select id="subject" name="subject" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                                <option value="">Select a subject...</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="product">Product Question</option>
+                                <option value="billing">Billing & Payments</option>
+                                <option value="integration">Integration Help</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message"
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message *</label>
+                            <textarea id="message" name="message" rows="6" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Hours -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Support Hours</h2>
+                <p>Our team is available during the following hours</p>
+            </div>
+
+            <div class="grid grid-2" style="max-width: 800px; margin: 0 auto;">
+                <div class="card">
+                    <h3>🕐 Business Hours</h3>
+                    <p style="margin-top: 1rem; line-height: 1.8;">
+                        <strong>Monday - Friday:</strong><br>
+                        9:00 AM - 6:00 PM SGT<br><br>
+                        <strong>Saturday:</strong><br>
+                        9:00 AM - 1:00 PM SGT<br><br>
+                        <strong>Sunday:</strong><br>
+                        Closed
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ Priority Support</h3>
+                    <p style="margin-top: 1rem; line-height: 1.8;">
+                        For high-volume businesses and enterprise customers, we offer priority support with:
+                    </p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Dedicated account manager</li>
+                        <li>24/7 email support</li>
+                        <li>Faster response times</li>
+                        <li>Direct phone support</li>
+                    </ul>
+                    <a href="get-started.html" class="btn btn-outline" style="margin-top: 1.5rem;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="section" style="background: var(--color-bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h4>How quickly can I start selling?</h4>
+                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
+                        You can start selling within minutes! Simply sign up, connect your store, and import products.
+                        Our platform is designed for quick setup.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h4>What platforms do you integrate with?</h4>
+                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
+                        We integrate with Shopify, Etsy, WooCommerce, SHOPLINE, and offer a custom API for other
+                        platforms.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h4>How long does production take?</h4>
+                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
+                        Most orders are produced within 72 hours. Some specialized items may take longer, which will be
+                        clearly indicated on the product page.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>Are there any minimum order requirements?</h4>
+                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
+                        No! There are no minimum order requirements. You can sell one item at a time or thousands - we
+                        scale with your business.
+                    </p>
+                </div>
+
+                <a href="help-center.html" class="btn btn-outline" style="margin-top: 2rem; display: inline-block;">View
+                    All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
+                        Your trusted partner for custom dropshipping and print-on-demand solutions.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About & Contact</a></li>
+                        <li><a href="policies.html">Terms of Service</a></li>
+                        <li><a href="policies.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Integrations</h4>
+                    <ul>
+                        <li><a href="integrations.html">Sell on Shopify</a></li>
+                        <li><a href="integrations.html">Sell on Etsy</a></li>
+                        <li><a href="integrations.html">Sell on WooCommerce</a></li>
+                        <li><a href="integrations.html">Developer API</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="help-center.html#faq">FAQ</a></li>
+                        <li><a href="support.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    8 BURN ROAD, #04-04, TRIVEX, Singapore 369977 |
+                    <a href="mailto:info@happimall.com" style="color: var(--color-primary);">info@happimall.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+    <script>
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

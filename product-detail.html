@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View product details at Happi Mall">
+    <title>Product Details - Happi Mall</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleap is.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+</head>
+
+<body>
+    <!-- Header & Navigation (Same as products.html) -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="support.html" class="nav-link">Support</a>
+                </li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="get-started.html" class="btn btn-primary">Start Selling</a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Product Detail Container -->
+    <main style="min-height: 70vh; padding: 6rem 0 4rem;">
+        <div id="product-detail-container" class="container">
+            <!-- Loading message -->
+            <div id="loading" style="text-align: center; padding: 4rem 0;">
+                <p style="font-size: 1.25rem; color: var(--color-text-light);">Loading product...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
+                        Your trusted partner for custom dropshipping and print-on-demand solutions.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About & Contact</a></li>
+                        <li><a href="policies.html">Terms of Service</a></li>
+                        <li><a href="policies.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="support.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/product-detail.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+    "metadata": {
+        "totalProducts": 3390,
+        "scrapedAt": "2026-01-16T23:44:19+07:00",
+        "source": "MadeMine.com",
+        "categories": [
+            "New Arrivals",
+            "Best Sellers",
+            "Weddings",
+            "Christmas",
+            "Home & Living",
+            "GiftShop"
+        ],
+        "categoryCounts": {
+            "New Arrivals": 359,
+            "Best Sellers": 504,
+            "Weddings": 412,
+            "Christmas": 631,
+            "Home & Living": 954,
+            "GiftShop": 530
+        }
+    },
+    "products": [],
+    "note": "This file will be populated with the full product list. Due to size, products will be added via script."
+}
