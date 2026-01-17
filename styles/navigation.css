@@ -321,3 +321,20 @@
         width: 100%;
     }
 }
+
+/* Hide static/empty product sections */
+#member-products,
+#weddings,
+#handmade,
+#standard-picks,
+#christmas,
+#home-living,
+#pod-new,
+#pod-best,
+#jewelry,
+#accessories,
+#pod-home,
+#apparel,
+#template-design {
+    display: none !important;
+}
