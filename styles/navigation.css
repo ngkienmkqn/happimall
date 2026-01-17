@@ -19,15 +19,17 @@
 
 .nav-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+    justify-content: center;
+    padding: 1.5rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
+    gap: 1.5rem;
 }
 
 .logo {
-    height: 120px;
+    height: 200px;
     transition: var(--transition-fast);
 }
 
@@ -39,8 +41,10 @@
 .nav-menu {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2.5rem;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .nav-item {
@@ -187,6 +191,9 @@
 
 /* CTA Buttons in Nav */
 .nav-cta {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
     display: flex;
     align-items: center;
     gap: 1rem;
