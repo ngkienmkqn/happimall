@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Happi Mall - Exclusive Brands, Unbeatable Prices, Global Reach. B2B Wholesale Partner.">
+    <title>Happi Mall - Global B2B Wholesale</title>
+
+    <link rel="icon" type="image/png" href="images/logo-b2b.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0f1c3f;
+            --navy-light: #1a2d5a;
+            --gold: #c9a962;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f8f9fc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.5rem 0;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .header-cta {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .header-cta:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--navy) 0%, #0a1428 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            right: -10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60%;
+            opacity: 0.9;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            padding: 2rem 0;
+        }
+
+        .hero-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 .gold {
+            color: var(--gold);
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            max-width: 480px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--navy-light);
+            color: var(--white);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background: var(--bg);
+        }
+
+        .about .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-label {
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .about h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .about p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .feature-item::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Services */
+        .services {
+            padding: 5rem 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg);
+            padding: 2.5rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-link {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .service-link:hover {
+            color: var(--gold);
+        }
+
+        /* Steps */
+        .steps {
+            padding: 5rem 0;
+            background: var(--bg);
+            text-align: center;
+        }
+
+        .steps-label {
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .steps h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+            margin-bottom: 4rem;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .step p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        /* Contact */
+        .contact {
+            background: var(--navy);
+            padding: 4rem 0;
+        }
+
+        .contact .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            color: var(--white);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-right h3 {
+            color: var(--white);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-right p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a1428;
+            padding: 2rem 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-bg {
+                opacity: 0.3;
+                width: 100%;
+                right: 0;
+            }
+
+            .about .container {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">HAPPI MALL</a>
+            <nav>
+                <a href="products.html">Products</a>
+                <a href="#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="get-started.html" class="header-cta">Start Selling</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <img src="images/hero-ship.jpg" alt="" class="hero-bg">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">Global B2B Wholesale Partner</div>
+                <h1>Exclusive Brands.<br><span class="gold">Unbeatable Prices.</span><br>Global Reach.</h1>
+                <p>We supply 1,000+ top-tier brands globally with premium products. Expand your portfolio with the
+                    world's best merchandise.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary">Explore Products</a>
+                    <a href="#about" class="btn btn-outline">Why Choose Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-label">Why Partner With Us</div>
+                <h2>Grow your business without the inventory risk.</h2>
+                <p>We manage all the logistics so you can focus on what matters - selling and growing your brand. From
+                    sourcing to shipping, we've got you covered.</p>
+                <div class="features-list">
+                    <div class="feature-item">Over 1,000+ products</div>
+                    <div class="feature-item">Fast worldwide shipping</div>
+                    <div class="feature-item">No upfront investment</div>
+                    <div class="feature-item">Dedicated account team</div>
+                </div>
+                <a href="about.html" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="about-image">
+                <img src="images/hero-b2b.jpg" alt="Products">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>Our Products</h3>
+                    <p>Premium quality products across multiple categories. Home & Living, Corporate Gifts, Electronics,
+                        Eco-Friendly, and more.</p>
+                    <a href="products.html" class="service-link">View Catalog →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Our Services</h3>
+                    <p>End-to-end wholesale solutions including private labeling, custom packaging, bulk pricing, and
+                        global fulfillment.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="steps">
+        <div class="container">
+            <div class="steps-label">How It Works</div>
+            <h2>Simple steps to start selling.</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h4>Join the Family</h4>
+                    <p>Sign up and become part of our wholesale partner network in minutes.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h4>List Products</h4>
+                    <p>Add our premium products to your catalog. We handle all inventory.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h4>We Ship</h4>
+                    <p>When you get orders, we fulfill and ship directly to your customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to grow your business?</h2>
+            <p>Join 500+ partners already scaling with Happi Mall.</p>
+            <a href="#contact" class="btn btn-primary">Become a Partner →</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <div class="contact-item">📧 info@happimall.com</div>
+                <div class="contact-item">📞 +84 123 456 789</div>
+                <div class="contact-item">📍 Singapore & Vietnam</div>
+            </div>
+            <div class="contact-right">
+                <h3>Support Hours</h3>
+                <p>Monday - Friday<br>9:00 AM - 5:00 PM (SGT)</p>
+                <a href="mailto:info@happimall.com" class="contact-btn">Become a Member</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            © 2026 Happi Mall - All rights reserved
+        </div>
+    </footer>
+</body>
+
+</html>
+
+

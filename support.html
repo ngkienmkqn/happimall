@@ -4,304 +4,618 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Happi Mall Support - Get help with your dropshipping business. Contact our support team for technical assistance, product questions, and more.">
-    <meta name="keywords" content="happi mall support, dropshipping help, customer service, contact support">
-    <meta name="author" content="Articulat Private Limited">
-
+    <meta name="description" content="Happi Mall Support - Contact us for wholesale inquiries">
     <title>Support - Happi Mall</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-
-    <!-- Google Fonts -->
+    <link rel="icon" type="image/png" href="images/logo-b2b.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/navigation.css">
+    <style>
+        :root {
+            --navy: #0f1c3f;
+            --navy-light: #1a2d5a;
+            --gold: #c9a962;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f8f9fc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--navy);
+            padding: 1.5rem 0;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--gold);
+        }
+
+        .header-cta {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .header-cta:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0a1428 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .page-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+        }
+
+        .contact .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--bg);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-detail h4 {
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-detail p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--navy);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background: var(--navy);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 5rem 0;
+            background: var(--bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .faq-item h4 {
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Office Locations */
+        .offices {
+            padding: 5rem 0;
+        }
+
+        .offices-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .office-card {
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .office-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .office-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            padding: 3rem 0 1.5rem;
+            color: var(--white);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-links a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .contact .container {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .offices-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header & Navigation -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
-            </a>
-
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-                <li class="nav-item"><a href="how-it-works.html" class="nav-link">How it Works</a></li>
-                <li class="nav-item"><a href="integrations.html" class="nav-link">Integrations</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
-            </ul>
-
-            <div class="nav-cta">
-                <a href="get-started.html" class="btn btn-primary">Start Selling</a>
-            </div>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">HAPPI MALL</a>
+            <nav>
+                <a href="products.html">Products</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="support.html" class="active">Support</a>
+            </nav>
+            <a href="#contact-form" class="header-cta">Start Selling</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="section-hero" style="padding: 6rem 0 4rem;">
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" style="font-size: 3rem;">We're Here to Help</h1>
-                <p class="hero-subtitle">
-                    Get fast, friendly support from our expert team
-                </p>
+            <div class="page-label">Support Center</div>
+            <h1>We're Here to Help</h1>
+            <p>Get in touch with our team for wholesale inquiries, partnership opportunities, or any questions.</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Our dedicated team is ready to assist you with product inquiries, bulk orders, private labeling, and
+                    more.</p>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-detail">
+                        <h4>Email Us</h4>
+                        <p>info@happimall.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-detail">
+                        <h4>Call Us</h4>
+                        <p>+65 6123 4567 (Singapore)</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <div class="contact-detail">
+                        <h4>Live Chat</h4>
+                        <p>Available Mon-Fri, 9AM-5PM SGT</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <div class="contact-detail">
+                        <h4>Response Time</h4>
+                        <p>Usually within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form" id="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="mailto:info@happimall.com" method="GET" enctype="text/plain">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name *</label>
+                            <input type="text" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name *</label>
+                            <input type="text" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label>Inquiry Type</label>
+                        <select name="type">
+                            <option value="wholesale">Wholesale Inquiry</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="private-label">Private Label</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea name="message" placeholder="Tell us about your needs..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message →</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Support Options -->
-    <section class="section">
+    <section class="faq">
         <div class="container">
-            <div class="grid grid-3">
-                <div class="card text-center">
-                    <h3>📧 Email Support</h3>
-                    <p style="margin: 1rem 0;">General inquiries and support</p>
-                    <a href="mailto:info@happimall.com"
-                        style="color: var(--color-primary); font-size: 1.25rem; font-weight: 600;">
-                        info@happimall.com
-                    </a>
-                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);">
-                        Response time: Within 24 hours
-                    </p>
-                </div>
-
-                <div class="card text-center">
-                    <h3>💬 Live Chat</h3>
-                    <p style="margin: 1rem 0;">Instant support during business hours</p>
-                    <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Start Chat</a>
-                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);">
-                        Mon-Fri: 9 AM - 6 PM SGT
-                    </p>
-                </div>
-
-                <div class="card text-center">
-                    <h3>📚 Help Center</h3>
-                    <p style="margin: 1rem 0;">Browse our knowledge base</p>
-                    <a href="help-center.html" class="btn btn-outline" style="margin-top: 1rem;">Visit Help Center</a>
-                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);">
-                        Find answers to common questions
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="section" style="background: var(--color-bg-light);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Send Us a Message</h2>
-                <p>Fill out the form below and we'll get back to you soon</p>
-            </div>
-
-            <div style="max-width: 700px; margin: 0 auto;">
-                <div class="card">
-                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
-                        <div>
-                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Your Name
-                                *</label>
-                            <input type="text" id="name" name="name" required
-                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
-                        </div>
-
-                        <div>
-                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email
-                                Address *</label>
-                            <input type="email" id="email" name="email" required
-                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
-                        </div>
-
-                        <div>
-                            <label for="subject"
-                                style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Subject *</label>
-                            <select id="subject" name="subject" required
-                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
-                                <option value="">Select a subject...</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="technical">Technical Support</option>
-                                <option value="product">Product Question</option>
-                                <option value="billing">Billing & Payments</option>
-                                <option value="integration">Integration Help</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="message"
-                                style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message *</label>
-                            <textarea id="message" name="message" rows="6" required
-                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Support Hours -->
-    <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Support Hours</h2>
-                <p>Our team is available during the following hours</p>
-            </div>
-
-            <div class="grid grid-2" style="max-width: 800px; margin: 0 auto;">
-                <div class="card">
-                    <h3>🕐 Business Hours</h3>
-                    <p style="margin-top: 1rem; line-height: 1.8;">
-                        <strong>Monday - Friday:</strong><br>
-                        9:00 AM - 6:00 PM SGT<br><br>
-                        <strong>Saturday:</strong><br>
-                        9:00 AM - 1:00 PM SGT<br><br>
-                        <strong>Sunday:</strong><br>
-                        Closed
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>⚡ Priority Support</h3>
-                    <p style="margin-top: 1rem; line-height: 1.8;">
-                        For high-volume businesses and enterprise customers, we offer priority support with:
-                    </p>
-                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                        <li>Dedicated account manager</li>
-                        <li>24/7 email support</li>
-                        <li>Faster response times</li>
-                        <li>Direct phone support</li>
-                    </ul>
-                    <a href="get-started.html" class="btn btn-outline" style="margin-top: 1.5rem;">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Preview -->
-    <section class="section" style="background: var(--color-bg-light);">
-        <div class="container">
-            <div class="section-title">
+            <div class="section-header">
+                <div class="section-label">FAQ</div>
                 <h2>Frequently Asked Questions</h2>
-                <p>Quick answers to common questions</p>
             </div>
-
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div class="card" style="margin-bottom: 1.5rem;">
-                    <h4>How quickly can I start selling?</h4>
-                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
-                        You can start selling within minutes! Simply sign up, connect your store, and import products.
-                        Our platform is designed for quick setup.
-                    </p>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>What is your minimum order quantity (MOQ)?</h4>
+                    <p>Our MOQ starts from 50 units per product, making it easy for businesses of all sizes to work with
+                        us.</p>
                 </div>
-
-                <div class="card" style="margin-bottom: 1.5rem;">
-                    <h4>What platforms do you integrate with?</h4>
-                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
-                        We integrate with Shopify, Etsy, WooCommerce, SHOPLINE, and offer a custom API for other
-                        platforms.
-                    </p>
+                <div class="faq-item">
+                    <h4>Do you offer private labeling?</h4>
+                    <p>Yes! We offer comprehensive private label solutions including custom branding, packaging, and
+                        product modifications.</p>
                 </div>
-
-                <div class="card" style="margin-bottom: 1.5rem;">
-                    <h4>How long does production take?</h4>
-                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
-                        Most orders are produced within 72 hours. Some specialized items may take longer, which will be
-                        clearly indicated on the product page.
-                    </p>
+                <div class="faq-item">
+                    <h4>Which countries do you ship to?</h4>
+                    <p>We ship to 50+ countries worldwide with various shipping options including express and economy
+                        services.</p>
                 </div>
-
-                <div class="card">
-                    <h4>Are there any minimum order requirements?</h4>
-                    <p style="margin-top: 0.5rem; color: var(--color-text-light);">
-                        No! There are no minimum order requirements. You can sell one item at a time or thousands - we
-                        scale with your business.
-                    </p>
+                <div class="faq-item">
+                    <h4>What payment methods do you accept?</h4>
+                    <p>We accept wire transfers, PayPal, and major credit cards. Trade assurance is available for
+                        qualified partners.</p>
                 </div>
-
-                <a href="help-center.html" class="btn btn-outline" style="margin-top: 2rem; display: inline-block;">View
-                    All FAQs</a>
+                <div class="faq-item">
+                    <h4>How long does shipping take?</h4>
+                    <p>Express shipping takes 3-7 days, while economy shipping takes 15-30 days depending on
+                        destination.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I get samples before ordering?</h4>
+                    <p>Yes, sample orders are available at a small fee which can be credited toward your bulk order.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <section class="offices">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Locations</div>
+                <h2>Our Offices</h2>
+            </div>
+            <div class="offices-grid">
+                <div class="office-card">
+                    <h3>🇸🇬 Singapore (HQ)</h3>
+                    <p>Articulat Private Limited</p>
+                    <p>71 Robinson Road, #14-01</p>
+                    <p>Singapore 068895</p>
+                    <p>📞 +65 6123 4567</p>
+                </div>
+                <div class="office-card">
+                    <h3>🇻🇳 Vietnam Office</h3>
+                    <p>Happi Mall Vietnam</p>
+                    <p>District 1, Ho Chi Minh City</p>
+                    <p>Vietnam</p>
+                    <p>📞 +84 28 1234 5678</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
-                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
-                        Your trusted partner for custom dropshipping and print-on-demand solutions.
-                    </p>
+                <div class="footer-brand">
+                    <span class="logo">HAPPI MALL</span>
+                    <p>Your trusted B2B wholesale partner for premium products worldwide.</p>
                 </div>
-
-                <div class="footer-section">
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <a href="products.html">Catalog</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+                <div class="footer-links">
                     <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About & Contact</a></li>
-                        <li><a href="policies.html">Terms of Service</a></li>
-                        <li><a href="policies.html">Privacy Policy</a></li>
-                    </ul>
+                    <a href="about.html">About Us</a>
+                    <a href="#">Partners</a>
+                    <a href="#">Careers</a>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Integrations</h4>
-                    <ul>
-                        <li><a href="integrations.html">Sell on Shopify</a></li>
-                        <li><a href="integrations.html">Sell on Etsy</a></li>
-                        <li><a href="integrations.html">Sell on WooCommerce</a></li>
-                        <li><a href="integrations.html">Developer API</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
+                <div class="footer-links">
                     <h4>Support</h4>
-                    <ul>
-                        <li><a href="help-center.html">Help Center</a></li>
-                        <li><a href="help-center.html#faq">FAQ</a></li>
-                        <li><a href="support.html">Contact Us</a></li>
-                    </ul>
+                    <a href="support.html">Help Center</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                    8 BURN ROAD, #04-04, TRIVEX, Singapore 369977 |
-                    <a href="mailto:info@happimall.com" style="color: var(--color-primary);">info@happimall.com</a>
-                </p>
+                © 2026 Happi Mall - All rights reserved
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="scripts/main.js"></script>
-    <script>
-        // Simple form handling
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-            this.reset();
-        });
-    </script>
 </body>
 
 </html>
+
+

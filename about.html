@@ -4,226 +4,563 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="About Happi Mall - Learn about Articulat Private Limited and our mission to make custom dropshipping easier for businesses worldwide.">
-    <meta name="keywords" content="about happi mall, articulat private limited, dropshipping company, print on demand">
-    <meta name="author" content="Articulat Private Limited">
-
+    <meta name="description" content="About Happi Mall - Your trusted B2B wholesale partner">
     <title>About Us - Happi Mall</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-
-    <!-- Google Fonts -->
+    <link rel="icon" type="image/png" href="images/logo-b2b.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/navigation.css">
+    <style>
+        :root {
+            --navy: #0f1c3f;
+            --navy-light: #1a2d5a;
+            --gold: #c9a962;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f8f9fc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--navy);
+            padding: 1.5rem 0;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--gold);
+        }
+
+        .header-cta {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .header-cta:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0a1428 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .page-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 5rem 0;
+        }
+
+        .mission .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .mission-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .mission-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Stats */
+        .stats {
+            background: var(--bg);
+            padding: 4rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item h3 span {
+            color: var(--gold);
+        }
+
+        .stat-item p {
+            color: var(--text-light);
+        }
+
+        /* Values */
+        .values {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: var(--bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .value-card:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .value-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Team */
+        .team {
+            padding: 5rem 0;
+            background: var(--bg);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: var(--navy-light);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-info h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .team-info span {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 5rem 0;
+            text-align: center;
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a1428;
+            padding: 3rem 0 1.5rem;
+            color: var(--white);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-links a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .mission .container {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header & Navigation -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
-            </a>
-
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="index.html#products" class="nav-link">Products</a></li>
-                <li class="nav-item"><a href="index.html#hot-lists" class="nav-link">Hot Lists</a></li>
-                <li class="nav-item"><a href="index.html#warehouse" class="nav-link">Global Warehouse</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="index.html#support" class="nav-link">Support</a></li>
-            </ul>
-
-            <div class="nav-cta">
-                <a href="index.html#start" class="btn btn-primary">Start Selling</a>
-            </div>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">HAPPI MALL</a>
+            <nav>
+                <a href="products.html">Products</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html" class="active">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="index.html#contact" class="header-cta">Start Selling</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="section-hero" style="padding: 6rem 0 4rem;">
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" style="font-size: 3rem;">About Happi Mall</h1>
-                <p class="hero-subtitle">
-                    Empowering entrepreneurs worldwide with premium dropshipping and print-on-demand solutions
-                </p>
+            <div class="page-label">About Us</div>
+            <h1>Your Trusted Wholesale Partner</h1>
+            <p>We've been connecting businesses with premium products since 2018. Our mission is to make global
+                wholesale simple.</p>
+        </div>
+    </section>
+
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <h2>Empowering Businesses Worldwide</h2>
+                <p>Happi Mall is a leading B2B wholesale platform connecting retailers, distributors, and businesses
+                    with premium products from trusted manufacturers.</p>
+                <p>With offices in Singapore and Vietnam, we serve over 500 partners across 50+ countries, providing
+                    seamless access to quality merchandise at competitive prices.</p>
+                <p>Our end-to-end solutions include sourcing, quality control, private labeling, and global fulfillment
+                    - everything you need to grow your business without the inventory risk.</p>
+            </div>
+            <div class="mission-image">
+                <img src="images/hero-ship.jpg" alt="Global Network">
             </div>
         </div>
     </section>
 
-    <!-- About Content -->
-    <section class="section">
+    <section class="stats">
         <div class="container">
-            <div class="grid grid-2" style="gap: 4rem; align-items: center;">
-                <div>
-                    <h2>Our Mission</h2>
-                    <p style="font-size: 1.125rem; line-height: 1.8;">
-                        At <strong>Happi Mall</strong>, we believe in making ecommerce accessible to everyone.
-                        Our mission is to provide entrepreneurs, small businesses, and established brands with
-                        the tools and infrastructure they need to succeed in the custom products market.
-                    </p>
-                    <p style="font-size: 1.125rem; line-height: 1.8; margin-top: 1.5rem;">
-                        We combine cutting-edge technology with exceptional customer service to deliver
-                        a seamless dropshipping experience. From product sourcing to fulfillment, we handle
-                        the logistics so you can focus on growing your business.
-                    </p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500<span>+</span></h3>
+                    <p>Global Partners</p>
                 </div>
-                <div>
-                    <img src="images/products-showcase.png" alt="About Happi Mall"
-                        style="width: 100%; border-radius: 16px; box-shadow: var(--shadow-lg);">
+                <div class="stat-item">
+                    <h3>10K<span>+</span></h3>
+                    <p>Products</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="section" style="background: var(--color-bg-light);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Core Values</h2>
-                <p>The principles that guide everything we do</p>
-            </div>
-
-            <div class="grid grid-3">
-                <div class="card">
-                    <h3>🎯 Quality First</h3>
-                    <p>
-                        We never compromise on quality. Every product that leaves our warehouses
-                        meets our strict quality standards to ensure customer satisfaction.
-                    </p>
+                <div class="stat-item">
+                    <h3>50<span>+</span></h3>
+                    <p>Countries Served</p>
                 </div>
-                <div class="card">
-                    <h3>⚡ Speed & Efficiency</h3>
-                    <p>
-                        Time is money in ecommerce. Our 72-hour production guarantee ensures
-                        your customers receive their orders quickly.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>🤝 Partnership</h3>
-                    <p>
-                        Your success is our success. We're here to support your business
-                        every step of the way with dedicated customer service.
-                    </p>
+                <div class="stat-item">
+                    <h3>7<span>+</span></h3>
+                    <p>Years Experience</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Information -->
-    <section class="section">
+    <section class="values">
         <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>We'd love to hear from you</p>
+            <div class="section-header">
+                <div class="section-label">Our Values</div>
+                <h2>What Drives Us</h2>
             </div>
-
-            <div class="grid grid-2" style="gap: 3rem;">
-                <div class="card">
-                    <h3>📍 Our Office</h3>
-                    <p style="font-size: 1.125rem; margin-top: 1rem;">
-                        <strong>Articulat Private Limited</strong><br>
-                        8 BURN ROAD, #04-04, TRIVEX<br>
-                        Singapore 369977
-                    </p>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Quality First</h3>
+                    <p>Every product goes through rigorous quality control before reaching our partners.</p>
                 </div>
-
-                <div class="card">
-                    <h3>📧 Get in Touch</h3>
-                    <p style="font-size: 1.125rem; margin-top: 1rem;">
-                        <strong>Email:</strong><br>
-                        <a href="mailto:info@happimall.com"
-                            style="color: var(--color-primary); font-size: 1.25rem; font-weight: 600;">
-                            info@happimall.com
-                        </a>
-                    </p>
-                    <p style="margin-top: 1.5rem;">
-                        Our team typically responds within 24 hours
-                    </p>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Partnership</h3>
+                    <p>We believe in building long-term relationships, not just transactions.</p>
                 </div>
-            </div>
-
-            <div class="card"
-                style="margin-top: 3rem; text-align: center; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: white;">
-                <h3 style="color: white; margin-bottom: 1rem;">Ready to Start Selling?</h3>
-                <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.125rem; margin-bottom: 1.5rem;">
-                    Join thousands of successful entrepreneurs using Happi Mall
-                </p>
-                <a href="index.html#start" class="btn" style="background: white; color: var(--color-primary);">
-                    Get Started Free
-                </a>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Global Reach</h3>
+                    <p>Our network spans continents to bring you the best products from around the world.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <section class="team">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Leadership</div>
+                <h2>Meet Our Team</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="images/team-1.jpg" alt="David Chen" class="team-photo">
+                    <div class="team-info">
+                        <h4>David Chen</h4>
+                        <span>Chief Executive Officer</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="images/team-2.jpg" alt="Sarah Wong" class="team-photo">
+                    <div class="team-info">
+                        <h4>Sarah Wong</h4>
+                        <span>Head of Operations</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="images/team-3.jpg" alt="Michael Tran" class="team-photo">
+                    <div class="team-info">
+                        <h4>Michael Tran</h4>
+                        <span>Director of Partnerships</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Partner With Us?</h2>
+            <p>Join our network of successful businesses worldwide</p>
+            <a href="index.html#contact" class="cta-btn">Get Started →</a>
+        </div>
+    </section>
+
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
-                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
-                        Your trusted partner for custom dropshipping and print-on-demand solutions.
-                    </p>
+                <div class="footer-brand">
+                    <span class="logo">HAPPI MALL</span>
+                    <p>Your trusted B2B wholesale partner for premium products worldwide.</p>
                 </div>
-
-                <div class="footer-section">
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <a href="products.html">Catalog</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+                <div class="footer-links">
                     <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About & Contact</a></li>
-                        <li><a href="policies.html">Terms of Service</a></li>
-                        <li><a href="policies.html">Privacy Policy</a></li>
-                    </ul>
+                    <a href="about.html">About Us</a>
+                    <a href="#">Partners</a>
+                    <a href="#">Careers</a>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Integrations</h4>
-                    <ul>
-                        <li><a href="#shopify">Sell on Shopify</a></li>
-                        <li><a href="#etsy">Sell on Etsy</a></li>
-                        <li><a href="#woocommerce">Sell on WooCommerce</a></li>
-                        <li><a href="#api">Developer API</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
+                <div class="footer-links">
                     <h4>Support</h4>
-                    <ul>
-                        <li><a href="#help">Help Center</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#shipping">Shipping Info</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
+                    <a href="support.html">Help Center</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                    8 BURN ROAD, #04-04, TRIVEX, Singapore 369977 |
-                    <a href="mailto:info@happimall.com" style="color: var(--color-primary);">info@happimall.com</a>
-                </p>
+                © 2026 Happi Mall - All rights reserved
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="scripts/main.js"></script>
 </body>
 
 </html>

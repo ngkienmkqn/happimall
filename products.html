@@ -4,611 +4,529 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Browse Happi Mall's extensive catalog of dropshipping and print-on-demand products. Over 1000+ high-quality custom products ready for your store.">
-    <meta name="keywords" content="dropshipping products, print on demand, custom products, happi mall catalog">
-    <meta name="author" content="Articulat Private Limited">
+    <meta name="description" content="Happi Mall Product Catalog - Browse 1000+ wholesale products">
+    <title>Product Catalog - Happi Mall</title>
 
-    <title>Products - Happi Mall</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-
-    <!-- Google Fonts -->
+    <link rel="icon" type="image/png" href="images/logo-b2b.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/navigation.css">
+    <style>
+        :root {
+            --navy: #0f1c3f;
+            --navy-light: #1a2d5a;
+            --gold: #c9a962;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f8f9fc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--navy);
+            padding: 1.5rem 0;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--gold);
+        }
+
+        .header-cta {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .header-cta:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0a1428 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Filters */
+        .filters {
+            background: var(--white);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .filters .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg);
+            padding: 0.6rem 1rem;
+            border-radius: 4px;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            font-size: 0.95rem;
+        }
+
+        .category-filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #e5e7eb;
+            background: var(--white);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        /* Products Grid */
+        .products {
+            padding: 3rem 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #f3f4f6;
+        }
+
+        .product-content {
+            padding: 1rem;
+        }
+
+        .product-category {
+            font-size: 0.75rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-price {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .product-btn {
+            display: block;
+            background: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 0.75rem;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+
+        .product-btn:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* Load More */
+        .load-more {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .load-more-btn {
+            background: var(--white);
+            border: 1px solid var(--navy);
+            color: var(--navy);
+            padding: 1rem 3rem;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .load-more-btn:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            padding: 3rem 0 1.5rem;
+            color: var(--white);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-links a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .category-filters {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header & Navigation -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
-            </a>
-
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item has-mega">
-                    <a href="products.html" class="nav-link dropdown-toggle">Products</a>
-                    <div class="mega-menu">
-                        <div class="mega-menu-grid">
-                            <div class="mega-menu-section">
-                                <h4>Drop Shipping</h4>
-                                <ul>
-                                    <li><a href="#new-arrivals">New Arrivals</a></li>
-                                    <li><a href="#outlet-picks">Outlet Picks</a></li>
-                                    <li><a href="#best-sellers">Best Sellers (Hot)</a></li>
-                                    <li><a href="#giftshop">Happi Mall GiftShop</a></li>
-                                    <li><a href="#member-products">Member Products</a></li>
-                                    <li><a href="#weddings">Weddings</a></li>
-                                    <li><a href="#handmade">Handmade</a></li>
-                                    <li><a href="#standard-picks">Standard Picks</a></li>
-                                    <li><a href="#christmas">Christmas</a></li>
-                                    <li><a href="#home-living">Home & Living</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-section">
-                                <h4>Print on Demand (POD)</h4>
-                                <ul>
-                                    <li><a href="#pod-new">New Arrivals</a></li>
-                                    <li><a href="#pod-best">Best Sellers</a></li>
-                                    <li><a href="#jewelry">Jewelry</a></li>
-                                    <li><a href="#accessories">Accessories</a></li>
-                                    <li><a href="#pod-home">Home & Living</a></li>
-                                    <li><a href="#apparel">Apparel</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-section">
-                                <h4>Discover More</h4>
-                                <ul>
-                                    <li><a href="#template-design">Template Design</a></li>
-                                    <li><a href="how-it-works.html">How it Works</a></li>
-                                    <li><a href="help-center.html">Help Center</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="nav-item has-dropdown">
-                    <a href="#trending" class="nav-link dropdown-toggle">Hot Lists</a>
-                    <div class="dropdown-menu">
-                        <a href="#best-sellers" class="dropdown-item">Best Sellers</a>
-                        <a href="#weddings" class="dropdown-item">Weddings</a>
-                        <a href="#christmas" class="dropdown-item">Christmas</a>
-                        <a href="#handmade" class="dropdown-item">Handmade</a>
-                    </div>
-                </li>
-
-                <li class="nav-item has-dropdown">
-                    <a href="#warehouse" class="nav-link dropdown-toggle">Global Warehouse</a>
-                    <div class="dropdown-menu">
-                        <a href="#usa" class="dropdown-item">Made in USA</a>
-                        <a href="#australia" class="dropdown-item">Made in Australia</a>
-                        <a href="#europe" class="dropdown-item">Made in Europe</a>
-                        <a href="#asia" class="dropdown-item">Made in Asia</a>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="support.html" class="nav-link">Support</a>
-                </li>
-            </ul>
-
-            <div class="nav-cta">
-                <a href="get-started.html" class="btn btn-primary">Start Selling</a>
-            </div>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">HAPPI MALL</a>
+            <nav>
+                <a href="products.html" class="active">Products</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="index.html#contact" class="header-cta">Start Selling</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="section-hero" style="padding: 6rem 0 4rem;">
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" style="font-size: 3rem;">Our Product Catalog</h1>
-                <p class="hero-subtitle">
-                    <strong style="color: var(--color-primary);">Over 1000+ High-Quality Products</strong> •
-                    <strong style="color: var(--color-primary);">No Minimums</strong> •
-                    <strong style="color: var(--color-primary);">Fast Production</strong>
-                </p>
+            <h1>Product Catalog</h1>
+            <p>Browse our collection of 1,000+ premium wholesale products</p>
+        </div>
+    </section>
+
+    <section class="filters">
+        <div class="container">
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+            </div>
+            <div class="category-filters">
+                <button class="filter-btn active" onclick="filterByCategory('all')">All</button>
+                <button class="filter-btn" onclick="filterByCategory('Audio')">Audio</button>
+                <button class="filter-btn" onclick="filterByCategory('Electronics')">Electronics</button>
+                <button class="filter-btn" onclick="filterByCategory('Kitchenware')">Kitchenware</button>
+                <button class="filter-btn" onclick="filterByCategory('General Merchandise')">General</button>
             </div>
         </div>
     </section>
 
-    <!-- Drop Shipping Section -->
-    <section class="section" style="background: var(--color-bg-light);">
+    <section class="products">
         <div class="container">
-            <div class="section-title">
-                <h2>Drop Shipping Products</h2>
-                <p>Premium products ready to dropship to your customers</p>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
             </div>
-
-            <!-- New Arrivals -->
-            <div id="new-arrivals" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">🆕 New Arrivals</h3>
-                <div class="grid grid-4">
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/nesting-dolls.png" alt="Personalized Nesting Doll"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Personalized Nesting Doll</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $4.50</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">5 Working Days</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/pet-house.png" alt="Custom Pet Holographic House"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Custom Pet Holographic House</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $5.90</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Fast Production</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/office-figurine.png" alt="3D Mini Figure Office Figurine"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>3D Mini Figure Office Figurine</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $10.04</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Custom Design</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/gachapon.png" alt="Music Gachapon Machine"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Music Gachapon Machine</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">$9.90</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Unique Gift</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Outlet Picks -->
-            <div id="outlet-picks" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">💎 Outlet Picks</h3>
-                <div class="grid grid-4">
-                    <div class="card">
-                        <h4>Clearance Item #1</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $3.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Limited Stock</p>
-                    </div>
-                    <div class="card">
-                        <h4>Special Deal #2</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $5.49</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">While Supplies Last</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Best Sellers -->
-            <div id="best-sellers" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">🔥 Best Sellers (Hot)
-                </h3>
-                <div class="grid grid-4">
-                    <div class="card">
-                        <h4>WiFi Video Globe</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">$39.55</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">10-20 days production</p>
-                    </div>
-                    <div class="card">
-                        <h4>Custom Pet Holographic House</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $5.90</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Fast Shipping</p>
-                    </div>
-                    <div class="card">
-                        <h4>3D Mini Figure</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $10.04</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Popular Choice</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Happi Mall GiftShop -->
-            <div id="giftshop" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">🎁 Happi Mall GiftShop
-                </h3>
-                <p style="font-size: 1.125rem; margin-bottom: 2rem;">Curated gift collection for special occasions</p>
-                <div class="grid grid-4">
-                    <div class="card">
-                        <h4>Gift Bundle #1</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">$24.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Perfect for Occasions</p>
-                    </div>
-                    <div class="card">
-                        <h4>Custom Gift Set</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $19.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Personalization Available</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Member Products -->
-            <div id="member-products" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">⭐ Member Products</h3>
-                <p style="font-size: 1.125rem; margin-bottom: 2rem;">Exclusive products for members with special pricing
-                </p>
-                <div class="grid grid-4">
-                    <div class="card">
-                        <h4>Member Exclusive #1</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">$14.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Members Only</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Weddings -->
-            <div id="weddings" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">💒 Weddings</h3>
-                <div class="grid grid-4">
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/wedding-favors.png" alt="Custom Wedding Favors"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Custom Wedding Favors</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $2.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Bulk Pricing Available</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/jewelry.png" alt="Personalized Wedding Gifts"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Personalized Wedding Gifts</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $12.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Custom Engraving</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Handmade -->
-            <div id="handmade" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">✋ Handmade</h3>
-                <div class="grid grid-4">
-                    <div class="card">
-                        <h4>Artisan Crafted Items</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $15.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Handcrafted Quality</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Standard Picks -->
-            <div id="standard-picks" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">📦 Standard Picks</h3>
-                <div class="grid grid-4">
-                    <div class="card">
-                        <h4>Everyday Products</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $4.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Quick Turnaround</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Christmas -->
-            <div id="christmas" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">🎄 Christmas</h3>
-                <div class="grid grid-4">
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/christmas.png" alt="Holiday Ornaments"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Holiday Ornaments</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $3.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Seasonal Special</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/christmas.png" alt="Custom Christmas Gifts"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Custom Christmas Gifts</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $8.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Personalization</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Home & Living -->
-            <div id="home-living" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">🏠 Home & Living</h3>
-                <div class="grid grid-4">
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/blankets.png" alt="Ultra Soft Flannel Blanket"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Ultra Soft Flannel Blanket</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $7.52</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Multiple Sizes</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/home-decor.png" alt="Home Decor Items"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Home Decor Items</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $9.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Custom Designs</p>
-                    </div>
-                </div>
+            <div class="load-more">
+                <button class="load-more-btn" id="loadMoreBtn" onclick="loadMore()">Load More Products</button>
             </div>
         </div>
     </section>
 
-    <!-- Print on Demand Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Print on Demand (POD)</h2>
-                <p>Custom printed products with your designs</p>
-            </div>
-
-            <!-- POD New Arrivals -->
-            <div id="pod-new" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">🆕 POD New Arrivals</h3>
-                <div class="grid grid-4">
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/mugs.png" alt="Custom POD Mug"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Custom POD Mug</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">$3.17</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Print on Demand</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/tshirts.png" alt="Custom T-Shirt"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Custom T-Shirt</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $8.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Multiple Colors</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/hoodies.png" alt="Custom Hoodies"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Custom Hoodies</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $19.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Premium Quality</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/phone-cases.png" alt="Phone Cases"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Phone Cases</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $7.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">All Models</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- POD Best Sellers -->
-            <div id="pod-best" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">🔥 POD Best Sellers</h3>
-                <div class="grid grid-4">
-                    <div class="card">
-                        <h4>Custom Mugs</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">$3.17</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Fast Fulfillment</p>
-                    </div>
-                    <div class="card">
-                        <h4>Canvas Prints</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $12.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">High Quality</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Jewelry -->
-            <div id="jewelry" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">💍 Jewelry</h3>
-                <div class="grid grid-4">
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/jewelry.png" alt="Custom Necklaces"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Custom Necklaces</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $14.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Personalized</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/jewelry.png" alt="Custom Bracelets"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Custom Bracelets</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $9.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Engraving Available</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Accessories -->
-            <div id="accessories" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">👜 Accessories</h3>
-                <div class="grid grid-4">
-                    <div class="card">
-                        <h4>Custom Tote Bags</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $6.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Eco-Friendly</p>
-                    </div>
-                    <div class="card">
-                        <h4>Phone Cases</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $7.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">All Models</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- POD Home & Living -->
-            <div id="pod-home" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">🏡 POD Home & Living</h3>
-                <div class="grid grid-4">
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/pillows.png" alt="Custom Pillows"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Custom Pillows</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $11.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Various Sizes</p>
-                    </div>
-                    <div class="card" style="overflow: hidden;">
-                        <img src="images/products/posters.png" alt="Wall Art"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem -1.5rem;">
-                        <h4>Wall Art</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $15.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Custom Prints</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Apparel -->
-            <div id="apparel" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">👕 Apparel</h3>
-                <div class="grid grid-4">
-                    <div class="card">
-                        <h4>Custom T-Shirts</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $8.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">All Sizes</p>
-                    </div>
-                    <div class="card">
-                        <h4>Hoodies</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $19.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Premium Quality</p>
-                    </div>
-                    <div class="card">
-                        <h4>Tank Tops</h4>
-                        <p style="color: var(--color-primary); font-size: 1.5rem; font-weight: 700;">From $7.99</p>
-                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Summer Collection</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Discover More Section -->
-    <section class="section" style="background: var(--color-bg-light);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Discover More</h2>
-                <p>Tools and resources to help you succeed</p>
-            </div>
-
-            <!-- Template Design -->
-            <div id="template-design" style="padding-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-primary);">🎨 Template Design</h3>
-                <div class="grid grid-3">
-                    <div class="card">
-                        <h4>Design Templates</h4>
-                        <p>Pre-made templates for quick customization of your products.</p>
-                        <a href="get-started.html" class="btn btn-outline" style="margin-top: 1rem;">Get Started</a>
-                    </div>
-                    <div class="card">
-                        <h4>AI Design Tools</h4>
-                        <p>Use AI-powered tools to create stunning custom designs automatically.</p>
-                        <a href="get-started.html" class="btn btn-outline" style="margin-top: 1rem;">Try Now</a>
-                    </div>
-                    <div class="card">
-                        <h4>Design Guidelines</h4>
-                        <p>Learn best practices for creating print-ready designs.</p>
-                        <a href="help-center.html" class="btn btn-outline" style="margin-top: 1rem;">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global Warehouse Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Global Warehouse Locations</h2>
-                <p>Ship faster with our worldwide fulfillment centers</p>
-            </div>
-
-            <div class="grid grid-4" style="padding-top: 2rem;">
-                <div id="usa" class="card text-center">
-                    <h3>🇺🇸 Made in USA</h3>
-                    <p>Fast shipping across North America</p>
-                </div>
-                <div id="australia" class="card text-center">
-                    <h3>🇦🇺 Made in Australia</h3>
-                    <p>Quick delivery to Australia & New Zealand</p>
-                </div>
-                <div id="europe" class="card text-center">
-                    <h3>🇪🇺 Made in Europe</h3>
-                    <p>Efficient shipping throughout Europe</p>
-                </div>
-                <div id="asia" class="card text-center">
-                    <h3>🌏 Made in Asia</h3>
-                    <p>Rapid fulfillment across Asia Pacific</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section"
-        style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
-        <div class="container">
-            <div class="cta-section" style="text-align: center; color: white;">
-                <h2 style="color: white;">Ready to Start Selling?</h2>
-                <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.25rem; margin: 1.5rem 0;">
-                    Browse our full catalog and start importing products to your store today
-                </p>
-                <a href="get-started.html" class="btn btn-large"
-                    style="background: white; color: var(--color-primary);">Get Started Free</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
-                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
-                        Your trusted partner for custom dropshipping and print-on-demand solutions.
-                    </p>
+                <div class="footer-brand">
+                    <span class="logo">HAPPI MALL</span>
+                    <p>Your trusted B2B wholesale partner for premium products worldwide.</p>
                 </div>
-
-                <div class="footer-section">
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <a href="#">Catalog</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+                <div class="footer-links">
                     <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About & Contact</a></li>
-                        <li><a href="policies.html">Terms of Service</a></li>
-                        <li><a href="policies.html">Privacy Policy</a></li>
-                    </ul>
+                    <a href="about.html">About Us</a>
+                    <a href="#">Partners</a>
+                    <a href="#">Careers</a>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Integrations</h4>
-                    <ul>
-                        <li><a href="integrations.html">Sell on Shopify</a></li>
-                        <li><a href="integrations.html">Sell on Etsy</a></li>
-                        <li><a href="integrations.html">Sell on WooCommerce</a></li>
-                        <li><a href="integrations.html">Developer API</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
+                <div class="footer-links">
                     <h4>Support</h4>
-                    <ul>
-                        <li><a href="help-center.html">Help Center</a></li>
-                        <li><a href="help-center.html#faq">FAQ</a></li>
-                        <li><a href="support.html">Contact Us</a></li>
-                    </ul>
+                    <a href="support.html">Help Center</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                    8 BURN ROAD, #04-04, TRIVEX, Singapore 369977 |
-                    <a href="mailto:info@happimall.com" style="color: var(--color-primary);">info@happimall.com</a>
-                </p>
+                © 2026 Happi Mall - All rights reserved
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="scripts/products.js"></script>
-    <script src="scripts/main.js"></script>
+    <script>
+        let allProducts = [];
+        let displayedProducts = 0;
+        const productsPerPage = 20;
+        let currentCategory = 'all';
+
+        // Load products from JSON
+        async function loadProducts() {
+            try {
+                const response = await fetch('data/products.json');
+                allProducts = await response.json();
+                displayProducts();
+            } catch (error) {
+                console.error('Error loading products:', error);
+            }
+        }
+
+        function displayProducts() {
+            const grid = document.getElementById('productsGrid');
+            const start = displayedProducts;
+            const end = Math.min(start + productsPerPage, getFilteredProducts().length);
+
+            const filtered = getFilteredProducts();
+
+            if (start === 0) grid.innerHTML = '';
+
+            for (let i = start; i < end; i++) {
+                const product = filtered[i];
+                const card = createProductCard(product);
+                grid.innerHTML += card;
+            }
+
+            displayedProducts = end;
+
+            // Hide load more if no more products
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (displayedProducts >= filtered.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'inline-block';
+            }
+        }
+
+        function getFilteredProducts() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            return allProducts.filter(product => {
+                const matchesCategory = currentCategory === 'all' || product.category === currentCategory;
+                const matchesSearch = product.name.toLowerCase().includes(searchTerm);
+                return matchesCategory && matchesSearch;
+            });
+        }
+
+        function createProductCard(product) {
+            const imgPath = product.img.startsWith('/') ? product.img.substring(1) : product.img;
+            return `
+                <div class="product-card">
+                    <a href="product-detail.html?id=${product.id}">
+                        <img src="${imgPath}" alt="${product.name}" class="product-image" onerror="this.src='images/products/80_Product_Dummy_Image.jpg'">
+                    </a>
+                    <div class="product-content">
+                        <div class="product-category">${product.category}</div>
+                        <a href="product-detail.html?id=${product.id}" style="text-decoration:none">
+                            <h3 class="product-name">${product.name}</h3>
+                        </a>
+                        <div class="product-price">${product.price}</div>
+                        <a href="product-detail.html?id=${product.id}" class="product-btn">View Details</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function loadMore() {
+            displayProducts();
+        }
+
+        function filterByCategory(category) {
+            currentCategory = category;
+            displayedProducts = 0;
+
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            displayProducts();
+        }
+
+        function filterProducts() {
+            displayedProducts = 0;
+            displayProducts();
+        }
+
+        // Initialize
+        loadProducts();
+    </script>
 </body>
 
 </html>
+
+

@@ -4,320 +4,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Happi Mall Terms of Service and Privacy Policy - Legal information for using our dropshipping and print-on-demand services.">
-    <meta name="author" content="Articulat Private Limited">
+    <meta name="description" content="Happi Mall Policies - Terms of Service, Privacy Policy, Return Policy">
+    <title>Policies - Happi Mall</title>
 
-    <title>Terms & Privacy - Happi Mall</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-
-    <!-- Google Fonts -->
+    <link rel="icon" type="image/png" href="images/logo-b2b.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/navigation.css">
-
     <style>
-        .policy-content {
+        :root {
+            --navy: #0f1c3f;
+            --navy-light: #1a2d5a;
+            --gold: #c9a962;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f8f9fc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        .container {
             max-width: 900px;
             margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--navy);
+            padding: 1.5rem 0;
+        }
+
+        header .container {
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .header-cta {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0a1428 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-header .container {
+            max-width: 1200px;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Content */
+        .policies {
+            padding: 4rem 0;
+        }
+
+        .policy-nav {
+            background: var(--bg);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .policy-nav a {
+            padding: 0.5rem 1rem;
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .policy-nav a:hover,
+        .policy-nav a.active {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+        }
+
+        .policy-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .policy-section h3 {
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        .policy-section p {
+            color: var(--text-light);
             line-height: 1.8;
-        }
-
-        .policy-content h2 {
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--color-primary);
-        }
-
-        .policy-content h3 {
-            margin-top: 2rem;
             margin-bottom: 1rem;
-            color: var(--color-primary);
         }
 
-        .policy-content p {
-            margin-bottom: 1.25rem;
+        .policy-section ul {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .policy-content ul {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
+        .policy-section li {
+            margin-bottom: 0.5rem;
         }
 
-        .policy-content li {
-            margin-bottom: 0.75rem;
+        .last-updated {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            padding: 2rem 0;
+            color: var(--white);
+            text-align: center;
+        }
+
+        footer .container {
+            max-width: 1200px;
+        }
+
+        .footer-bottom {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- Header & Navigation -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
-            </a>
-
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="index.html#products" class="nav-link">Products</a></li>
-                <li class="nav-item"><a href="index.html#hot-lists" class="nav-link">Hot Lists</a></li>
-                <li class="nav-item"><a href="index.html#warehouse" class="nav-link">Global Warehouse</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="index.html#support" class="nav-link">Support</a></li>
-            </ul>
-
-            <div class="nav-cta">
-                <a href="index.html#start" class="btn btn-primary">Start Selling</a>
-            </div>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">HAPPI MALL</a>
+            <nav>
+                <a href="products.html">Products</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="index.html#contact" class="header-cta">Start Selling</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="section-hero" style="padding: 4rem 0 2rem;">
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" style="font-size: 2.5rem;">Terms of Service & Privacy Policy</h1>
-                <p class="hero-subtitle">Legal information and policies governing the use of Happi Mall services</p>
-            </div>
+            <h1>Policies</h1>
+            <p>Our terms, conditions, and policies for wholesale partners</p>
         </div>
     </section>
 
-    <!-- Policy Content -->
-    <section class="section">
+    <section class="policies">
         <div class="container">
-            <div class="policy-content">
-                <!-- Terms of Service -->
-                <h2 id="terms">Terms of Service</h2>
-                <p><strong>Last Updated:</strong> January 2026</p>
+            <nav class="policy-nav">
+                <a href="#terms" class="active">Terms of Service</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#returns">Return Policy</a>
+                <a href="#shipping">Shipping Policy</a>
+            </nav>
 
-                <h3>1. Agreement to Terms</h3>
-                <p>
-                    These Terms of Service ("Terms") constitute a legally binding agreement between you and
-                    <strong>Articulat Private Limited</strong> ("Happi Mall", "we", "us", or "our") concerning
-                    your access to and use of the Happi Mall platform and services.
-                </p>
+            <div class="policy-section" id="terms">
+                <h2>Terms of Service</h2>
+                <p class="last-updated">Last updated: January 2026</p>
 
-                <h3>2. Services Description</h3>
-                <p>
-                    Happi Mall provides dropshipping and print-on-demand services, enabling users to:
-                </p>
+                <h3>1. Acceptance of Terms</h3>
+                <p>By accessing and using Happi Mall's services, you agree to be bound by these Terms of Service. These
+                    terms apply to all visitors, users, and partners who access or use our wholesale services.</p>
+
+                <h3>2. Wholesale Partnership</h3>
+                <p>To become a wholesale partner, you must:</p>
                 <ul>
-                    <li>Create and sell custom-branded products</li>
-                    <li>Integrate with ecommerce platforms (Shopify, Etsy, WooCommerce, etc.)</li>
-                    <li>Access our global warehouse network</li>
-                    <li>Utilize automated order fulfillment</li>
+                    <li>Be a registered business entity</li>
+                    <li>Complete our partnership application</li>
+                    <li>Agree to our minimum order requirements</li>
+                    <li>Maintain accurate business information</li>
                 </ul>
 
-                <h3>3. Account Registration</h3>
-                <p>
-                    To use our services, you must create an account and provide accurate, complete information.
-                    You are responsible for maintaining the confidentiality of your account credentials and for
-                    all activities that occur under your account.
-                </p>
+                <h3>3. Pricing and Payment</h3>
+                <p>All prices are quoted in USD and are subject to change without notice. Payment terms vary based on
+                    partnership level. Trade assurance may be available for qualified partners.</p>
 
-                <h3>4. Pricing and Payment</h3>
-                <p>
-                    Pricing for products and services is listed on our platform and may change at any time.
-                    Payment is required for all orders placed through the platform. All fees are exclusive of
-                    applicable taxes unless otherwise stated.
-                </p>
+                <h3>4. Intellectual Property</h3>
+                <p>All content, trademarks, and intellectual property on this website belong to Happi Mall or our
+                    licensors. Unauthorized use is strictly prohibited.</p>
+            </div>
 
-                <h3>5. Product Quality and Fulfillment</h3>
-                <p>
-                    We strive to maintain high-quality standards for all products and aim for a production
-                    time of under 72 hours for most orders. However, fulfillment times may vary based on
-                    product type, customization requirements, and order volume.
-                </p>
+            <div class="policy-section" id="privacy">
+                <h2>Privacy Policy</h2>
+                <p class="last-updated">Last updated: January 2026</p>
 
-                <h3>6. Intellectual Property</h3>
-                <p>
-                    You retain all rights to your designs and branded content. By uploading content to our
-                    platform, you grant Happi Mall a license to use that content solely for the purpose of
-                    fulfilling orders and providing services.
-                </p>
-
-                <h3>7. Prohibited Activities</h3>
-                <p>You agree not to:</p>
+                <h3>Information We Collect</h3>
+                <p>We collect information you provide directly to us, including:</p>
                 <ul>
-                    <li>Upload content that infringes on intellectual property rights</li>
-                    <li>Sell counterfeit, illegal, or prohibited products</li>
-                    <li>Use our services for fraudulent purposes</li>
-                    <li>Interfere with the proper functioning of our platform</li>
-                </ul>
-
-                <h3>8. Limitation of Liability</h3>
-                <p>
-                    To the maximum extent permitted by law, Articulat Private Limited shall not be liable for
-                    any indirect, incidental, special, consequential, or punitive damages arising from your use
-                    of our services.
-                </p>
-
-                <h3>9. Governing Law</h3>
-                <p>
-                    These Terms shall be governed by and construed in accordance with the laws of Singapore,
-                    without regard to its conflict of law provisions.
-                </p>
-
-                <h3>10. Contact Information</h3>
-                <p>
-                    For questions about these Terms, please contact us at:
-                </p>
-                <p>
-                    <strong>Articulat Private Limited</strong><br>
-                    8 BURN ROAD, #04-04, TRIVEX<br>
-                    Singapore 369977<br>
-                    Email: <a href="mailto:info@happimall.com">info@happimall.com</a>
-                </p>
-
-                <!-- Privacy Policy -->
-                <h2 id="privacy" style="margin-top: 5rem;">Privacy Policy</h2>
-                <p><strong>Last Updated:</strong> January 2026</p>
-
-                <h3>1. Information We Collect</h3>
-                <p>We collect information that you provide directly to us, including:</p>
-                <ul>
-                    <li>Account information (name, email, business details)</li>
-                    <li>Payment information</li>
-                    <li>Order and fulfillment data</li>
-                    <li>Design files and custom content</li>
+                    <li>Business contact information</li>
+                    <li>Company details and registration</li>
+                    <li>Order history and preferences</li>
                     <li>Communication records</li>
                 </ul>
 
-                <h3>2. How We Use Your Information</h3>
-                <p>We use the information we collect to:</p>
+                <h3>How We Use Your Information</h3>
+                <p>We use the information we collect to process orders, communicate with you, improve our services, and
+                    comply with legal obligations.</p>
+
+                <h3>Data Protection</h3>
+                <p>We implement industry-standard security measures to protect your data. Your information is never sold
+                    to third parties.</p>
+            </div>
+
+            <div class="policy-section" id="returns">
+                <h2>Return Policy</h2>
+                <p class="last-updated">Last updated: January 2026</p>
+
+                <h3>Return Eligibility</h3>
+                <p>Products may be returned within 14 days of delivery if they are:</p>
                 <ul>
-                    <li>Provide, maintain, and improve our services</li>
-                    <li>Process transactions and fulfill orders</li>
-                    <li>Send you technical notices and support messages</li>
-                    <li>Respond to your comments and questions</li>
-                    <li>Detect and prevent fraud and abuse</li>
+                    <li>Defective or damaged upon arrival</li>
+                    <li>Incorrect items shipped</li>
+                    <li>Significantly different from description</li>
                 </ul>
 
-                <h3>3. Information Sharing</h3>
-                <p>
-                    We do not sell your personal information. We may share your information with:
-                </p>
+                <h3>Return Process</h3>
+                <p>To initiate a return, contact our support team with your order number and photos of the issue. Our
+                    team will review and provide return instructions within 48 hours.</p>
+
+                <h3>Refunds</h3>
+                <p>Approved returns will be refunded to the original payment method within 5-10 business days after we
+                    receive the returned items.</p>
+            </div>
+
+            <div class="policy-section" id="shipping">
+                <h2>Shipping Policy</h2>
+                <p class="last-updated">Last updated: January 2026</p>
+
+                <h3>Shipping Options</h3>
                 <ul>
-                    <li>Service providers who assist in our operations</li>
-                    <li>Third parties as required by law</li>
-                    <li>Business partners with your consent</li>
+                    <li><strong>Express Shipping:</strong> 3-7 business days</li>
+                    <li><strong>Standard Shipping:</strong> 10-15 business days</li>
+                    <li><strong>Economy Shipping:</strong> 20-30 business days</li>
                 </ul>
 
-                <h3>4. Data Security</h3>
-                <p>
-                    We implement appropriate technical and organizational measures to protect your personal
-                    information against unauthorized access, alteration, disclosure, or destruction.
-                </p>
+                <h3>Shipping Destinations</h3>
+                <p>We ship to 50+ countries worldwide. Shipping costs are calculated based on weight, dimensions, and
+                    destination.</p>
 
-                <h3>5. Your Rights</h3>
-                <p>You have the right to:</p>
-                <ul>
-                    <li>Access and update your personal information</li>
-                    <li>Request deletion of your data</li>
-                    <li>Opt-out of marketing communications</li>
-                    <li>Lodge a complaint with a data protection authority</li>
-                </ul>
-
-                <h3>6. Cookies and Tracking</h3>
-                <p>
-                    We use cookies and similar tracking technologies to collect information about your browsing
-                    activities and to personalize your experience.
-                </p>
-
-                <h3>7. International Data Transfers</h3>
-                <p>
-                    Your information may be transferred to and processed in countries other than your country of
-                    residence. We ensure appropriate safeguards are in place for such transfers.
-                </p>
-
-                <h3>8. Changes to This Policy</h3>
-                <p>
-                    We may update this Privacy Policy from time to time. We will notify you of any material
-                    changes by posting the new policy on this page.
-                </p>
-
-                <h3>9. Contact Us</h3>
-                <p>
-                    If you have questions about this Privacy Policy, please contact us at:
-                </p>
-                <p>
-                    <strong>Articulat Private Limited</strong><br>
-                    8 BURN ROAD, #04-04, TRIVEX<br>
-                    Singapore 369977<br>
-                    Email: <a href="mailto:info@happimall.com">info@happimall.com</a>
-                </p>
+                <h3>Customs and Duties</h3>
+                <p>International orders may be subject to customs duties and taxes. These charges are the responsibility
+                    of the buyer.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
-                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
-                        Your trusted partner for custom dropshipping and print-on-demand solutions.
-                    </p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About & Contact</a></li>
-                        <li><a href="policies.html#terms">Terms of Service</a></li>
-                        <li><a href="policies.html#privacy">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Integrations</h4>
-                    <ul>
-                        <li><a href="#shopify">Sell on Shopify</a></li>
-                        <li><a href="#etsy">Sell on Etsy</a></li>
-                        <li><a href="#woocommerce">Sell on WooCommerce</a></li>
-                        <li><a href="#api">Developer API</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#help">Help Center</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#shipping">Shipping Info</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                    8 BURN ROAD, #04-04, TRIVEX, Singapore 369977 |
-                    <a href="mailto:info@happimall.com" style="color: var(--color-primary);">info@happimall.com</a>
-                </p>
+                © 2026 Happi Mall - All rights reserved
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="scripts/main.js"></script>
 </body>
 
 </html>
+
+

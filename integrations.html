@@ -4,376 +4,444 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Integrate Happi Mall with your ecommerce platform. Connect Shopify, Etsy, WooCommerce, SHOPLINE, or use our custom API.">
-    <meta name="keywords" content="shopify integration, etsy integration, woocommerce dropshipping, ecommerce api">
-    <meta name="author" content="Articulat Private Limited">
-
+    <meta name="description" content="Happi Mall Integrations - Connect with your e-commerce platforms">
     <title>Integrations - Happi Mall</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-
-    <!--Google Fonts -->
+    <link rel="icon" type="image/png" href="images/logo-b2b.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/navigation.css">
+    <style>
+        :root {
+            --navy: #0f1c3f;
+            --navy-light: #1a2d5a;
+            --gold: #c9a962;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f8f9fc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--navy);
+            padding: 1.5rem 0;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .header-cta {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0a1428 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .page-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Integrations */
+        .integrations {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--navy);
+        }
+
+        .integrations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .integration-card {
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .integration-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .integration-logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .integration-card h3 {
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .integration-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .integration-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .status-available {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status-coming {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        /* API Section */
+        .api {
+            padding: 5rem 0;
+            background: var(--bg);
+        }
+
+        .api .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .api-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .api-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .api-features {
+            margin-bottom: 2rem;
+        }
+
+        .api-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .api-feature::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--white);
+            padding: 0.9rem 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .api-visual {
+            background: var(--navy);
+            border-radius: 8px;
+            padding: 2rem;
+            color: #9ca3af;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            overflow: hidden;
+        }
+
+        .api-visual code {
+            display: block;
+            white-space: pre;
+        }
+
+        .code-comment {
+            color: #6b7280;
+        }
+
+        .code-key {
+            color: #f59e0b;
+        }
+
+        .code-string {
+            color: #34d399;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 5rem 0;
+            text-align: center;
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a1428;
+            padding: 2rem 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 1024px) {
+            .integrations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .api .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .integrations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header & Navigation -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
-            </a>
-
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-                <li class="nav-item"><a href="how-it-works.html" class="nav-link">How it Works</a></li>
-                <li class="nav-item"><a href="integrations.html" class="nav-link">Integrations</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
-            </ul>
-
-            <div class="nav-cta">
-                <a href="get-started.html" class="btn btn-primary">Start Selling</a>
-            </div>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">HAPPI MALL</a>
+            <nav>
+                <a href="products.html">Products</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="index.html#contact" class="header-cta">Start Selling</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="section-hero" style="padding: 6rem 0 4rem;">
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" style="font-size: 3rem;">Platform Integrations</h1>
-                <p class="hero-subtitle">
-                    Connect Happi Mall to your favorite ecommerce platform in minutes
-                </p>
-            </div>
+            <div class="page-label">Integrations</div>
+            <h1>Connect Your Store</h1>
+            <p>Seamlessly integrate Happi Mall with your existing e-commerce platforms and marketplaces</p>
         </div>
     </section>
 
-    <!-- Popular Integrations -->
-    <section class="section">
+    <section class="integrations">
         <div class="container">
-            <div class="section-title">
-                <h2>Popular Integrations</h2>
-                <p>One-click integration with leading ecommerce platforms</p>
+            <div class="section-header">
+                <h2>Platform Integrations</h2>
             </div>
-
-            <div class="grid grid-2" style="max-width: 1000px; margin: 0 auto;">
-                <!-- Shopify -->
-                <div id="shopify" class="card">
-                    <h3>🛍️ Shopify</h3>
-                    <p style="margin: 1rem 0; line-height: 1.8;">
-                        Seamlessly integrate with Shopify, the world's leading ecommerce platform. Install our app from
-                        the Shopify App Store and start importing products instantly.
-                    </p>
-                    <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 2;">
-                        <li>Automatic order syncing</li>
-                        <li>Real-time inventory updates</li>
-                        <li>One-click product import</li>
-                        <li>Tracking number automation</li>
-                    </ul>
-                    <a href="get-started.html" class="btn btn-primary" style="margin-top: 1rem;">Connect Shopify</a>
+            <div class="integrations-grid">
+                <div class="integration-card">
+                    <div class="integration-logo">🛒</div>
+                    <h3>Shopify</h3>
+                    <p>Connect your Shopify store and sync products automatically</p>
+                    <span class="integration-status status-available">Available</span>
                 </div>
-
-                <!-- Etsy -->
-                <div id="etsy" class="card">
-                    <h3>🎨 Etsy</h3>
-                    <p style="margin: 1rem 0; line-height: 1.8;">
-                        Perfect for creative sellers on Etsy. Our integration makes it easy to offer custom and
-                        personalized products to your Etsy customers.
-                    </p>
-                    <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 2;">
-                        <li>Direct Etsy store connection</li>
-                        <li>Automatic fulfillment</li>
-                        <li>Custom product options</li>
-                        <li>Etsy-compliant shipping</li>
-                    </ul>
-                    <a href="get-started.html" class="btn btn-primary" style="margin-top: 1rem;">Connect Etsy</a>
+                <div class="integration-card">
+                    <div class="integration-logo">🌐</div>
+                    <h3>WooCommerce</h3>
+                    <p>WordPress integration for seamless inventory sync</p>
+                    <span class="integration-status status-available">Available</span>
                 </div>
-
-                <!-- WooCommerce -->
-                <div id="woocommerce" class="card">
-                    <h3>🛒 WooCommerce</h3>
-                    <p style="margin: 1rem 0; line-height: 1.8;">
-                        Power your WordPress store with Happi Mall dropshipping. Our WordPress plugin integrates
-                        seamlessly with WooCommerce.
-                    </p>
-                    <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 2;">
-                        <li>WordPress plugin available</li>
-                        <li>Full WooCommerce compatibility</li>
-                        <li>Easy product sync</li>
-                        <li>Order automation</li>
-                    </ul>
-                    <a href="get-started.html" class="btn btn-primary" style="margin-top: 1rem;">Connect WooCommerce</a>
+                <div class="integration-card">
+                    <div class="integration-logo">📦</div>
+                    <h3>Amazon</h3>
+                    <p>Direct fulfillment to Amazon FBA warehouses</p>
+                    <span class="integration-status status-coming">Coming Soon</span>
                 </div>
-
-                <!-- SHOPLINE -->
-                <div id="shopline" class="card">
-                    <h3>📦 SHOPLINE</h3>
-                    <p style="margin: 1rem 0; line-height: 1.8;">
-                        Popular in Asia-Pacific markets, SHOPLINE integration helps you reach customers across the
-                        region with local fulfillment.
-                    </p>
-                    <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 2;">
-                        <li>SHOPLINE app integration</li>
-                        <li>Multi-currency support</li>
-                        <li>Regional warehouses</li>
-                        <li>Local language support</li>
-                    </ul>
-                    <a href="get-started.html" class="btn btn-primary" style="margin-top: 1rem;">Connect SHOPLINE</a>
+                <div class="integration-card">
+                    <div class="integration-logo">🏪</div>
+                    <h3>eBay</h3>
+                    <p>List products on eBay with synchronized inventory</p>
+                    <span class="integration-status status-coming">Coming Soon</span>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-logo">💼</div>
+                    <h3>BigCommerce</h3>
+                    <p>Enterprise-level integration for larger stores</p>
+                    <span class="integration-status status-available">Available</span>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-logo">🔗</div>
+                    <h3>Custom API</h3>
+                    <p>Build custom integrations with our REST API</p>
+                    <span class="integration-status status-available">Available</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Custom API -->
-    <section id="api" class="section" style="background: var(--color-bg-light);">
+    <section class="api">
         <div class="container">
-            <div class="section-title">
+            <div class="api-content">
                 <h2>Developer API</h2>
-                <p>Build custom integrations with our REST API</p>
+                <p>Build custom integrations with our powerful REST API. Access product catalogs, place orders, and
+                    track shipments programmatically.</p>
+                <div class="api-features">
+                    <div class="api-feature">RESTful API with JSON responses</div>
+                    <div class="api-feature">OAuth 2.0 authentication</div>
+                    <div class="api-feature">Webhook notifications</div>
+                    <div class="api-feature">Comprehensive documentation</div>
+                </div>
+                <a href="support.html" class="btn">Request API Access →</a>
             </div>
+            <div class="api-visual">
+                <code><span class="code-comment">// Get product catalog</span>
+GET /api/v1/products
 
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div class="card">
-                    <h3>🔧 Custom API Integration</h3>
-                    <p style="margin: 1rem 0; line-height: 1.8;">
-                        For developers and businesses with custom requirements, our RESTful API provides full
-                        programmatic access to Happi Mall's functionality.
-                    </p>
-
-                    <div class="grid grid-2" style="margin-top: 2rem;">
-                        <div>
-                            <h4>API Features</h4>
-                            <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
-                                <li>Product catalog access</li>
-                                <li>Order submission</li>
-                                <li>Inventory tracking</li>
-                                <li>Shipment tracking</li>
-                                <li>Webhook notifications</li>
-                                <li>Pricing & availability</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4>Documentation</h4>
-                            <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
-                                <li>Complete API reference</li>
-                                <li>Code examples (Python, Node.js, PHP)</li>
-                                <li>Authentication guide</li>
-                                <li>Rate limits & best practices</li>
-                                <li>Sandbox environment</li>
-                                <li>Developer support</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div
-                        style="margin-top: 2rem; padding: 1.5rem; background: var(--color-bg-light); border-radius: 8px;">
-                        <h4>Sample API Request</h4>
-                        <pre
-                            style="margin-top: 1rem; padding: 1rem; background: #1a1a1a; color: #00ff00; border-radius: 4px; overflow-x: auto; font-size: 0.875rem;">
-POST /api/v1/orders
-Authorization: Bearer YOUR_API_KEY
-
+<span class="code-comment">// Response</span>
 {
-  "product_id": "12345",
-  "quantity": 1,
-  "customer": {
-    "name": "John Doe",
-    "email": "john@example.com",
-    "shipping_address": { ... }
+  <span class="code-key">"status"</span>: <span class="code-string">"success"</span>,
+  <span class="code-key">"data"</span>: {
+    <span class="code-key">"products"</span>: [...],
+    <span class="code-key">"total"</span>: 10543,
+    <span class="code-key">"page"</span>: 1
   }
-}</pre>
-                    </div>
-
-                    <a href="support.html" class="btn btn-primary" style="margin-top: 2rem;">Request API Access</a>
-                </div>
+}</code>
             </div>
         </div>
     </section>
 
-    <!-- Comparison Table -->
-    <section class="section">
+    <section class="cta">
         <div class="container">
-            <div class="section-title">
-                <h2>Integration Comparison</h2>
-                <p>Choose the best integration for your needs</p>
-            </div>
-
-            <div style="overflow-x: auto;">
-                <table
-                    style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
-                    <thead>
-                        <tr style="background: var(--color-primary); color: white;">
-                            <th style="padding: 1rem; text-align: left;">Feature</th>
-                            <th style="padding: 1rem; text-align: center;">Shopify</th>
-                            <th style="padding: 1rem; text-align: center;">Etsy</th>
-                            <th style="padding: 1rem; text-align: center;">WooCommerce</th>
-                            <th style="padding: 1rem; text-align: center;">SHOPLINE</th>
-                            <th style="padding: 1rem; text-align: center;">Custom API</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid var(--color-border);">
-                            <td style="padding: 1rem;">Auto Order Sync</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--color-border);">
-                            <td style="padding: 1rem;">One-Click Import</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">⚙️</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--color-border);">
-                            <td style="padding: 1rem;">Tracking Updates</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                            <td style="padding: 1rem; text-align: center;">✅</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--color-border);">
-                            <td style="padding: 1rem;">Setup Time</td>
-                            <td style="padding: 1rem; text-align: center;">5 minutes</td>
-                            <td style="padding: 1rem; text-align: center;">10 minutes</td>
-                            <td style="padding: 1rem; text-align: center;">15 minutes</td>
-                            <td style="padding: 1rem; text-align: center;">10 minutes</td>
-                            <td style="padding: 1rem; text-align: center;">Varies</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 1rem;">Technical Skills</td>
-                            <td style="padding: 1rem; text-align: center;">None</td>
-                            <td style="padding: 1rem; text-align: center;">None</td>
-                            <td style="padding: 1rem; text-align: center;">Basic</td>
-                            <td style="padding: 1rem; text-align: center;">None</td>
-                            <td style="padding: 1rem; text-align: center;">Developer</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h2>Ready to Integrate?</h2>
+            <p>Our team will help you set up the perfect integration for your business</p>
+            <a href="support.html" class="cta-btn">Contact Us →</a>
         </div>
     </section>
 
-    <!-- Integration Support -->
-    <section class="section" style="background: var(--color-bg-light);">
+    <footer>
         <div class="container">
-            <div class="section-title">
-                <h2>Need Help with Integration?</h2>
-                <p>Our team is here to assist you</p>
-            </div>
-
-            <div class="grid grid-3">
-                <div class="card text-center">
-                    <h4>📖 Documentation</h4>
-                    <p style="margin: 1rem 0;">Comprehensive guides for each platform</p>
-                    <a href="help-center.html#integrations" class="btn btn-outline">View Guides</a>
-                </div>
-
-                <div class="card text-center">
-                    <h4>💬 Live Support</h4>
-                    <p style="margin: 1rem 0;">Chat with our integration specialists</p>
-                    <a href="support.html" class="btn btn-outline">Get Help</a>
-                </div>
-
-                <div class="card text-center">
-                    <h4>🎥 Video Tutorials</h4>
-                    <p style="margin: 1rem 0;">Step-by-step video walkthroughs</p>
-                    <a href="help-center.html" class="btn btn-outline">Watch Videos</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section"
-        style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
-        <div class="container">
-            <div style="text-align: center; color: white;">
-                <h2 style="color: white;">Ready to Connect Your Store?</h2>
-                <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.25rem; margin: 1.5rem 0;">
-                    Get started in minutes with our easy integration process
-                </p>
-                <a href="get-started.html" class="btn btn-large"
-                    style="background: white; color: var(--color-primary);">Get Started Free</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
-                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
-                        Your trusted partner for custom dropshipping and print-on-demand solutions.
-                    </p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About & Contact</a></li>
-                        <li><a href="policies.html">Terms of Service</a></li>
-                        <li><a href="policies.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Integrations</h4>
-                    <ul>
-                        <li><a href="#shopify">Sell on Shopify</a></li>
-                        <li><a href="#etsy">Sell on Etsy</a></li>
-                        <li><a href="#woocommerce">Sell on WooCommerce</a></li>
-                        <li><a href="#api">Developer API</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="help-center.html">Help Center</a></li>
-                        <li><a href="help-center.html#faq">FAQ</a></li>
-                        <li><a href="support.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                    8 BURN ROAD, #04-04, TRIVEX, Singapore 369977 |
-                    <a href="mailto:info@happimall.com" style="color: var(--color-primary);">info@happimall.com</a>
-                </p>
-            </div>
+            © 2026 Happi Mall - All rights reserved
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="scripts/main.js"></script>
 </body>
 
 </html>
+
+

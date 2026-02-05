@@ -4,104 +4,398 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="View product details at Happi Mall">
+    <meta name="description" content="Product Details - Happi Mall Wholesale">
     <title>Product Details - Happi Mall</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-
-    <!-- Google Fonts -->
+    <link rel="icon" type="image/png" href="images/logo-b2b.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleap is.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/navigation.css">
+    <style>
+        :root {
+            --navy: #0f1c3f;
+            --navy-light: #1a2d5a;
+            --gold: #c9a962;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f8f9fc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--navy);
+            padding: 1.5rem 0;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .header-cta {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 0;
+            background: var(--white);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--navy);
+        }
+
+        .breadcrumb span {
+            color: var(--text-light);
+        }
+
+        /* Product Detail */
+        .product-detail {
+            padding: 3rem 0;
+        }
+
+        .product-detail .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .product-gallery {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .product-gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-category {
+            color: var(--gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: var(--navy);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .product-features {
+            margin-bottom: 2rem;
+        }
+
+        .product-features h3 {
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .feature-tag {
+            background: var(--bg);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--navy);
+        }
+
+        /* Pricing Tiers */
+        .pricing-tiers {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-tiers h3 {
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .tier {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .tier:last-child {
+            border-bottom: none;
+        }
+
+        .tier-qty {
+            color: var(--text-light);
+        }
+
+        .tier-discount {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* Actions */
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--navy);
+            color: var(--white);
+            flex: 1;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--navy);
+            color: var(--navy);
+        }
+
+        .btn-outline:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            padding: 2rem 0;
+            color: var(--white);
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-bottom {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 1024px) {
+            .product-detail .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header & Navigation (Same as products.html) -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
-            </a>
-
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item">
-                    <a href="products.html" class="nav-link">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="support.html" class="nav-link">Support</a>
-                </li>
-            </ul>
-
-            <div class="nav-cta">
-                <a href="get-started.html" class="btn btn-primary">Start Selling</a>
-            </div>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">HAPPI MALL</a>
+            <nav>
+                <a href="products.html">Products</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="get-started.html" class="header-cta">Start Selling</a>
+        </div>
     </header>
 
-    <!-- Product Detail Container -->
-    <main style="min-height: 70vh; padding: 6rem 0 4rem;">
-        <div id="product-detail-container" class="container">
-            <!-- Loading message -->
-            <div id="loading" style="text-align: center; padding: 4rem 0;">
-                <p style="font-size: 1.25rem; color: var(--color-text-light);">Loading product...</p>
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span> / </span>
+            <a href="products.html">Products</a>
+            <span> / </span>
+            <span id="breadcrumb-name">Product Name</span>
+        </div>
+    </section>
+
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-gallery">
+                <img id="product-image" src="images/products/80_Product_Dummy_Image.jpg" alt="Product">
+            </div>
+            <div class="product-info">
+                <div class="product-category" id="product-category">Category</div>
+                <h1 id="product-name">Product Name</h1>
+                <div class="product-price" id="product-price">Contact for Price</div>
+                <p class="product-description" id="product-description">Product description will appear here.</p>
+
+                <div class="product-features">
+                    <h3>Features</h3>
+                    <div class="feature-list" id="feature-list">
+                        <span class="feature-tag">Authentic</span>
+                        <span class="feature-tag">Fast Shipping</span>
+                    </div>
+                </div>
+
+                <div class="pricing-tiers">
+                    <h3>Bulk Pricing</h3>
+                    <div class="tier">
+                        <span class="tier-qty">50-99 units</span>
+                        <span class="tier-discount">5% off</span>
+                    </div>
+                    <div class="tier">
+                        <span class="tier-qty">100-499 units</span>
+                        <span class="tier-discount">15% off</span>
+                    </div>
+                    <div class="tier">
+                        <span class="tier-qty">500+ units</span>
+                        <span class="tier-discount">25% off</span>
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <a href="contact.html" class="btn btn-primary" id="quote-btn">Request Quote →</a>
+                    <a href="products.html" class="btn btn-outline">Back to Catalog</a>
+                </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
-                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
-                        Your trusted partner for custom dropshipping and print-on-demand solutions.
-                    </p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About & Contact</a></li>
-                        <li><a href="policies.html">Terms of Service</a></li>
-                        <li><a href="policies.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="help-center.html">Help Center</a></li>
-                        <li><a href="support.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
+                © 2026 Happi Mall - All rights reserved
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="scripts/product-detail.js"></script>
-    <script src="scripts/main.js"></script>
+    <script>
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        if (productId) {
+            // Load product data
+            fetch('data/products.json')
+                .then(response => response.json())
+                .then(products => {
+                    const product = products.find(p => p.id === productId);
+                    if (product) {
+                        document.getElementById('product-name').textContent = product.name;
+                        document.getElementById('breadcrumb-name').textContent = product.name;
+                        document.getElementById('product-category').textContent = product.category;
+                        document.getElementById('product-price').textContent = product.price;
+                        document.getElementById('product-description').textContent = product.description;
+
+                        const imgPath = product.img.startsWith('/') ? product.img.substring(1) : product.img;
+                        document.getElementById('product-image').src = imgPath;
+                        document.getElementById('product-image').alt = product.name;
+
+                        // Update quote button - link to contact page with product name
+                        document.getElementById('quote-btn').href = `contact.html?product=${encodeURIComponent(product.name)}`;
+
+                        // Update features
+                        if (product.features) {
+                            const featureList = document.getElementById('feature-list');
+                            featureList.innerHTML = product.features.map(f => `<span class="feature-tag">${f}</span>`).join('');
+                        }
+
+                        // Update page title
+                        document.title = `${product.name} - Happi Mall`;
+                    }
+                })
+                .catch(error => console.error('Error loading product:', error));
+        }
+    </script>
 </body>
 
 </html>
+

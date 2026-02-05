@@ -4,372 +4,535 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Happi Mall - Learn how drop shipping works. Simple methods for Rookie, Standard, and Professional sellers.">
-    <meta name="author" content="Articulat Private Limited">
+    <meta name="description" content="How It Works - Start your wholesale journey with Happi Mall">
+    <title>How It Works - Happi Mall</title>
 
-    <title>How it Works - Happi Mall</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-
-    <!-- Google Fonts -->
+    <link rel="icon" type="image/png" href="images/logo-b2b.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/navigation.css">
-
     <style>
-        .method-card {
-            background: white;
-            border-radius: 16px;
-            padding: 3rem 2rem;
-            box-shadow: var(--shadow-lg);
-            border: 2px solid var(--color-border);
-            transition: var(--transition-default);
-            position: relative;
-            overflow: hidden;
+        :root {
+            --navy: #0f1c3f;
+            --navy-light: #1a2d5a;
+            --gold: #c9a962;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f8f9fc;
+            --white: #ffffff;
         }
 
-        .method-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .method-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--color-primary);
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
         }
 
-        .method-number {
-            display: inline-flex;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--navy);
+            padding: 1.5rem 0;
+        }
+
+        header .container {
+            display: flex;
             align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-            color: white;
-            border-radius: 50%;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            color: var(--white);
+            text-decoration: none;
         }
 
-        .method-title {
-            font-size: 2rem;
-            color: var(--color-primary);
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .header-cta {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .header-cta:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0a1428 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .page-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 1rem;
         }
 
-        .method-steps {
-            margin-top: 2rem;
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 1rem;
         }
 
-        .method-step {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.25rem;
-            padding-bottom: 1.25rem;
-            border-bottom: 1px solid var(--color-border);
+        .page-header p {
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
         }
 
-        .method-step:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+        /* Steps Section */
+        .steps {
+            padding: 5rem 0;
         }
 
-        .step-icon {
-            flex-shrink: 0;
-            width: 32px;
-            height: 32px;
-            background: var(--color-bg-light);
-            border-radius: 8px;
-            display: flex;
+        .step-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        .step-row:nth-child(even) .step-content {
+            order: 2;
+        }
+
+        .step-number {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            color: var(--color-primary);
+            width: 60px;
+            height: 60px;
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 50%;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        .step-content h4 {
-            margin-bottom: 0.5rem;
-            font-size: 1.125rem;
+        .step-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
         }
 
         .step-content p {
-            margin-bottom: 0;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .step-features {
+            margin-top: 1.5rem;
+        }
+
+        .step-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .step-feature::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .step-visual {
+            background: var(--bg);
+            border-radius: 16px;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+        }
+
+        /* Benefits */
+        .benefits {
+            padding: 5rem 0;
+            background: var(--bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
             font-size: 0.9rem;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 5rem 0;
+            text-align: center;
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a1428;
+            padding: 3rem 0 1.5rem;
+            color: var(--white);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-links a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .step-row {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .step-row:nth-child(even) .step-content {
+                order: 0;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- Header & Navigation -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="Happi Mall Logo" class="logo">
-            </a>
-
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="index.html#products" class="nav-link">Products</a></li>
-                <li class="nav-item"><a href="index.html#hot-lists" class="nav-link">Hot Lists</a></li>
-                <li class="nav-item"><a href="index.html#warehouse" class="nav-link">Global Warehouse</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="index.html#support" class="nav-link">Support</a></li>
-            </ul>
-
-            <div class="nav-cta">
-                <a href="index.html#start" class="btn btn-primary">Start Selling</a>
-            </div>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">HAPPI MALL</a>
+            <nav>
+                <a href="products.html">Products</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="index.html#contact" class="header-cta">Start Selling</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="section-hero" style="padding: 6rem 0 4rem;">
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" style="font-size: 3.5rem;">How It Works</h1>
-                <p class="hero-subtitle">
-                    Three simple methods to start selling with Happi Mall. Choose the approach that fits your business
-                    model.
-                </p>
+            <div class="page-label">How It Works</div>
+            <h1>Simple Steps to Start Selling</h1>
+            <p>From sign-up to delivery, we make wholesale easy. Here's how to get started with Happi Mall.</p>
+        </div>
+    </section>
+
+    <section class="steps">
+        <div class="container">
+            <!-- Step 1 -->
+            <div class="step-row">
+                <div class="step-content">
+                    <div class="step-number">01</div>
+                    <h2>Sign Up & Apply</h2>
+                    <p>Create your free business account and submit your application. Our team reviews all applications
+                        within 24-48 hours to ensure quality partnerships.</p>
+                    <div class="step-features">
+                        <div class="step-feature">Free to join</div>
+                        <div class="step-feature">Quick approval process</div>
+                        <div class="step-feature">No minimum commitment</div>
+                    </div>
+                </div>
+                <div class="step-visual">📝</div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-row">
+                <div class="step-content">
+                    <div class="step-number">02</div>
+                    <h2>Browse & Select Products</h2>
+                    <p>Access our catalog of 10,000+ products across multiple categories. View pricing tiers, compare
+                        products, and build your order.</p>
+                    <div class="step-features">
+                        <div class="step-feature">10,000+ products</div>
+                        <div class="step-feature">Multiple categories</div>
+                        <div class="step-feature">Bulk pricing available</div>
+                    </div>
+                </div>
+                <div class="step-visual">🛒</div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-row">
+                <div class="step-content">
+                    <div class="step-number">03</div>
+                    <h2>Place Your Order</h2>
+                    <p>Submit your order with your preferred payment method. We offer flexible payment terms for
+                        established partners.</p>
+                    <div class="step-features">
+                        <div class="step-feature">Multiple payment options</div>
+                        <div class="step-feature">Net-30 for qualified partners</div>
+                        <div class="step-feature">Trade assurance available</div>
+                    </div>
+                </div>
+                <div class="step-visual">💳</div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-row">
+                <div class="step-content">
+                    <div class="step-number">04</div>
+                    <h2>We Ship Worldwide</h2>
+                    <p>Once your order is confirmed, we handle picking, packing, and shipping directly to you or your
+                        customers. Track your shipment in real-time.</p>
+                    <div class="step-features">
+                        <div class="step-feature">50+ countries</div>
+                        <div class="step-feature">Express & economy options</div>
+                        <div class="step-feature">Real-time tracking</div>
+                    </div>
+                </div>
+                <div class="step-visual">🚀</div>
             </div>
         </div>
     </section>
 
-    <!-- Methods Section -->
-    <section class="section">
+    <section class="benefits">
         <div class="container">
-            <!-- Rookie Method -->
-            <div class="method-card fade-in-up" style="margin-bottom: 3rem;">
-                <div class="method-number">1</div>
-                <h2 class="method-title">Rookie Method</h2>
-                <p style="font-size: 1.125rem; color: var(--color-text-light); margin-bottom: 2rem;">
-                    <strong>Find → Checkout</strong><br>
-                    Perfect for beginners or testing products. Simply browse, choose, and fulfill orders manually.
-                </p>
-
-                <div class="method-steps">
-                    <div class="method-step">
-                        <div class="step-icon">1</div>
-                        <div class="step-content">
-                            <h4>Find Products</h4>
-                            <p>Browse our catalog of 1000+ high-quality custom products. Filter by category, price, or
-                                production time.</p>
-                        </div>
-                    </div>
-
-                    <div class="method-step">
-                        <div class="step-icon">2</div>
-                        <div class="step-content">
-                            <h4>Receive Customer Orders</h4>
-                            <p>When a customer places an order on your store, collect their information and product
-                                details.</p>
-                        </div>
-                    </div>
-
-                    <div class="method-step">
-                        <div class="step-icon">3</div>
-                        <div class="step-content">
-                            <h4>Manual Checkout</h4>
-                            <p>Submit the order through Happi Mall with your customer's shipping address and
-                                customization details.</p>
-                        </div>
-                    </div>
-
-                    <div class="method-step">
-                        <div class="step-icon">4</div>
-                        <div class="step-content">
-                            <h4>We Handle Production & Shipping</h4>
-                            <p>We produce and ship directly to your customer. You keep the profit margin!</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header">
+                <div class="section-label">Benefits</div>
+                <h2>Why Partners Love Working With Us</h2>
             </div>
-
-            <!-- Standard Method -->
-            <div class="method-card fade-in-up" style="margin-bottom: 3rem; animation-delay: 0.1s;">
-                <div class="method-number">2</div>
-                <h2 class="method-title">Standard Method</h2>
-                <p style="font-size: 1.125rem; color: var(--color-text-light); margin-bottom: 2rem;">
-                    <strong>Find → Sell → Dropship</strong><br>
-                    Automate your fulfillment. Connect your store and let orders sync automatically.
-                </p>
-
-                <div class="method-steps">
-                    <div class="method-step">
-                        <div class="step-icon">1</div>
-                        <div class="step-content">
-                            <h4>Integrate Your Shop</h4>
-                            <p>Connect your Shopify, Etsy, WooCommerce, or other ecommerce platform with Happi Mall.</p>
-                        </div>
-                    </div>
-
-                    <div class="method-step">
-                        <div class="step-icon">2</div>
-                        <div class="step-content">
-                            <h4>Add Products to Your Store</h4>
-                            <p>Import products from our catalog to your store. Customize descriptions and set your
-                                retail prices.</p>
-                        </div>
-                    </div>
-
-                    <div class="method-step">
-                        <div class="step-icon">3</div>
-                        <div class="step-content">
-                            <h4>Customer Orders Automatically</h4>
-                            <p>When customers order, the order automatically syncs to Happi Mall for fulfillment.</p>
-                        </div>
-                    </div>
-
-                    <div class="method-step">
-                        <div class="step-icon">4</div>
-                        <div class="step-content">
-                            <h4>Automated Production & Shipping</h4>
-                            <p>We handle everything automatically - production, quality control, packaging, and
-                                worldwide shipping.</p>
-                        </div>
-                    </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Best Pricing</h3>
+                    <p>Up to 35% bulk discounts</p>
                 </div>
-            </div>
-
-            <!-- Professional Method -->
-            <div class="method-card fade-in-up" style="animation-delay: 0.2s;">
-                <div class="method-number">3</div>
-                <h2 class="method-title">Professional Method</h2>
-                <p style="font-size: 1.125rem; color: var(--color-text-light); margin-bottom: 2rem;">
-                    <strong>Design → Sell → Dropship</strong><br>
-                    Maximum customization. Upload your designs and create unique branded products.
-                </p>
-
-                <div class="method-steps">
-                    <div class="method-step">
-                        <div class="step-icon">1</div>
-                        <div class="step-content">
-                            <h4>Use Mockup Generator</h4>
-                            <p>Access our AI-powered design tools. Upload your artwork and apply it to any product in
-                                our catalog.</p>
-                        </div>
-                    </div>
-
-                    <div class="method-step">
-                        <div class="step-icon">2</div>
-                        <div class="step-content">
-                            <h4>Create Custom Products</h4>
-                            <p>Design unique products with your brand. Preview mockups in real-time before publishing.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="method-step">
-                        <div class="step-icon">3</div>
-                        <div class="step-content">
-                            <h4>Sync & Sell</h4>
-                            <p>Push your custom products directly to your connected stores. Set your pricing and start
-                                selling.</p>
-                        </div>
-                    </div>
-
-                    <div class="method-step">
-                        <div class="step-icon">4</div>
-                        <div class="step-content">
-                            <h4>Automated Fulfillment</h4>
-                            <p>Orders sync automatically. We print your designs on demand and ship to your customers
-                                worldwide.</p>
-                        </div>
-                    </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📦</div>
+                    <h3>Low MOQ</h3>
+                    <p>Start from 50 units</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏷️</div>
+                    <h3>Private Label</h3>
+                    <p>Custom branding available</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Dedicated Support</h3>
+                    <p>Personal account manager</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section" style="background: var(--color-bg-light);">
+    <section class="cta">
         <div class="container">
-            <div class="cta-section">
-                <h2>Ready to Get Started?</h2>
-                <p>
-                    Choose your method and start selling custom products today.
-                    100% free to use with no upfront costs or monthly fees.
-                </p>
-                <a href="index.html#start" class="btn btn-large">Start Your Free Account</a>
-            </div>
+            <h2>Ready to Get Started?</h2>
+            <p>Join 500+ businesses already growing with Happi Mall</p>
+            <a href="index.html#contact" class="cta-btn">Apply Now →</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <img src="images/logo.png" alt="Happi Mall Logo" class="footer-logo">
-                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
-                        Your trusted partner for custom dropshipping and print-on-demand solutions.
-                    </p>
+                <div class="footer-brand">
+                    <span class="logo">HAPPI MALL</span>
+                    <p>Your trusted B2B wholesale partner for premium products worldwide.</p>
                 </div>
-
-                <div class="footer-section">
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <a href="products.html">Catalog</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+                <div class="footer-links">
                     <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About & Contact</a></li>
-                        <li><a href="policies.html">Terms of Service</a></li>
-                        <li><a href="policies.html">Privacy Policy</a></li>
-                    </ul>
+                    <a href="about.html">About Us</a>
+                    <a href="#">Partners</a>
+                    <a href="#">Careers</a>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Integrations</h4>
-                    <ul>
-                        <li><a href="#shopify">Sell on Shopify</a></li>
-                        <li><a href="#etsy">Sell on Etsy</a></li>
-                        <li><a href="#woocommerce">Sell on WooCommerce</a></li>
-                        <li><a href="#api">Developer API</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
+                <div class="footer-links">
                     <h4>Support</h4>
-                    <ul>
-                        <li><a href="#help">Help Center</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#shipping">Shipping Info</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
+                    <a href="support.html">Help Center</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 All Rights Reserved. <strong>Articulat Private Limited</strong></p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                    8 BURN ROAD, #04-04, TRIVEX, Singapore 369977 |
-                    <a href="mailto:info@happimall.com" style="color: var(--color-primary);">info@happimall.com</a>
-                </p>
+                © 2026 Happi Mall - All rights reserved
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="scripts/main.js"></script>
 </body>
 
 </html>
+
+
